@@ -36,6 +36,17 @@ import {
   SiRedis,
   SiAmazon,
   SiGooglecloud,
+  SiMongodb,
+  SiPostgresql,
+  SiReact,
+  SiNodedotjs,
+  SiTypescript,
+  SiPython,
+  SiGo,
+  SiFlutter,
+  SiDocker,
+  SiKubernetes,
+  SiGraphql,
 } from "react-icons/si";
 import {
   VerticalTimeline,
@@ -685,6 +696,52 @@ export const AboutSection = () => {
 };
 
 // ==================== EXPERIENCE SECTION ====================
+// Helper function to extract and render tech stack with icons
+const getTechIcons = (stackString: string) => {
+  const techMap: Record<string, { icon: any; color: string }> = {
+    NestJS: { icon: SiNodedotjs, color: "#e0234e" },
+    "Node.js": { icon: SiNodedotjs, color: "#339933" },
+    PostgreSQL: { icon: SiPostgresql, color: "#336791" },
+    Redis: { icon: SiRedis, color: "#dc382d" },
+    Docker: { icon: SiDocker, color: "#2496ed" },
+    Kubernetes: { icon: SiKubernetes, color: "#326ce5" },
+    React: { icon: SiReact, color: "#61dafb" },
+    TypeScript: { icon: SiTypescript, color: "#3178c6" },
+    Angular: { icon: SiReact, color: "#dd0031" },
+    Java: { icon: FaCode, color: "#007396" },
+    "Spring Boot": { icon: FaCode, color: "#6db33f" },
+    Python: { icon: SiPython, color: "#3776ab" },
+    Golang: { icon: SiGo, color: "#00add8" },
+    Flutter: { icon: SiFlutter, color: "#02569b" },
+    MongoDB: { icon: SiMongodb, color: "#47a248" },
+    AWS: { icon: SiAmazon, color: "#ff9900" },
+    GCP: { icon: SiGooglecloud, color: "#4285f4" },
+    GraphQL: { icon: SiGraphql, color: "#e10098" },
+  };
+
+  // Extract tech names from "Stack: Tech1, Tech2, Tech3" format
+  const stackMatch = stackString.match(/Stack:\s*(.+)$/i);
+  if (!stackMatch) return [];
+
+  const techNames = stackMatch[1]
+    .split(",")
+    .map((t) => t.trim())
+    .slice(0, 6); // Limit to 6 icons
+
+  return techNames
+    .map((name) => {
+      // Find matching tech in map (case insensitive)
+      const techKey = Object.keys(techMap).find((key) =>
+        name.toLowerCase().includes(key.toLowerCase())
+      );
+      if (techKey) {
+        return { name, ...techMap[techKey] };
+      }
+      return null;
+    })
+    .filter(Boolean);
+};
+
 export const ExperienceSection = () => {
   const { t } = useTranslation();
 
@@ -763,20 +820,132 @@ export const ExperienceSection = () => {
               </ul>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-4 pt-6 border-t border-white/10">
-              <div>
-                <p className="text-sm text-white/60 mb-2">
-                  Backend & Infrastructure:
-                </p>
-                <p className="text-sm text-white/90">
-                  {t("experience.current.stack.backend")}
-                </p>
-              </div>
-              <div>
-                <p className="text-sm text-white/60 mb-2">Frontend:</p>
-                <p className="text-sm text-white/90">
-                  {t("experience.current.stack.frontend")}
-                </p>
+            {/* Tech Stack with Icons */}
+            <div className="pt-6 border-t border-white/10">
+              <h4 className="text-sm font-semibold text-white/60 mb-4">
+                Tech Stack:
+              </h4>
+              <div className="space-y-4">
+                {/* Backend & Infrastructure */}
+                <div>
+                  <p className="text-xs text-white/50 mb-2">
+                    Backend & Infrastructure:
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {[
+                      { icon: SiNodedotjs, name: "NestJS", color: "#e0234e" },
+                      { icon: SiNodedotjs, name: "Node.js", color: "#339933" },
+                      { icon: SiMongodb, name: "MongoDB", color: "#47a248" },
+                      { icon: SiRedis, name: "Redis", color: "#dc382d" },
+                      { icon: FaServer, name: "Pusher", color: "#a855f7" },
+                      { icon: SiDocker, name: "Docker", color: "#2496ed" },
+                    ].map((tech, idx) => {
+                      const Icon = tech.icon;
+                      return (
+                        <div
+                          key={idx}
+                          className="flex items-center gap-1.5 bg-black/30 backdrop-blur border border-white/10 rounded-md px-2.5 py-1.5 hover:border-purple-500/40 transition-all duration-300 hover:scale-105"
+                        >
+                          <Icon
+                            className="text-base"
+                            style={{ color: tech.color }}
+                          />
+                          <span className="text-xs text-white/80 font-medium">
+                            {tech.name}
+                          </span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                {/* Frontend */}
+                <div>
+                  <p className="text-xs text-white/50 mb-2">Frontend:</p>
+                  <div className="flex flex-wrap gap-2">
+                    {[
+                      { icon: SiReact, name: "React", color: "#61dafb" },
+                      { icon: SiReact, name: "Next.js", color: "#000000" },
+                      { icon: SiTypescript, name: "TypeScript", color: "#3178c6" },
+                      { icon: FaCode, name: "Tailwind", color: "#06b6d4" },
+                    ].map((tech, idx) => {
+                      const Icon = tech.icon;
+                      return (
+                        <div
+                          key={idx}
+                          className="flex items-center gap-1.5 bg-black/30 backdrop-blur border border-white/10 rounded-md px-2.5 py-1.5 hover:border-purple-500/40 transition-all duration-300 hover:scale-105"
+                        >
+                          <Icon
+                            className="text-base"
+                            style={{ color: tech.color }}
+                          />
+                          <span className="text-xs text-white/80 font-medium">
+                            {tech.name}
+                          </span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                {/* Integrations */}
+                <div>
+                  <p className="text-xs text-white/50 mb-2">Integrations:</p>
+                  <div className="flex flex-wrap gap-2">
+                    {[
+                      { icon: SiStripe, name: "Stripe", color: "#635bff" },
+                      { icon: FaCreditCard, name: "Apple Store", color: "#000" },
+                      { icon: FaCreditCard, name: "Cryptomus", color: "#f59e0b" },
+                      { icon: FaShieldAlt, name: "Security APIs", color: "#ef4444" },
+                    ].map((tech, idx) => {
+                      const Icon = tech.icon;
+                      return (
+                        <div
+                          key={idx}
+                          className="flex items-center gap-1.5 bg-black/30 backdrop-blur border border-white/10 rounded-md px-2.5 py-1.5 hover:border-purple-500/40 transition-all duration-300 hover:scale-105"
+                        >
+                          <Icon
+                            className="text-base"
+                            style={{ color: tech.color }}
+                          />
+                          <span className="text-xs text-white/80 font-medium">
+                            {tech.name}
+                          </span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                {/* Infrastructure */}
+                <div>
+                  <p className="text-xs text-white/50 mb-2">Infrastructure:</p>
+                  <div className="flex flex-wrap gap-2">
+                    {[
+                      { icon: SiAmazon, name: "AWS ECS", color: "#ff9900" },
+                      { icon: SiAmazon, name: "AWS Cognito", color: "#ff9900" },
+                      { icon: FaChartLine, name: "New Relic", color: "#008c99" },
+                      { icon: SiDocker, name: "Docker", color: "#2496ed" },
+                      { icon: FaCode, name: "GitHub Actions", color: "#2088ff" },
+                    ].map((tech, idx) => {
+                      const Icon = tech.icon;
+                      return (
+                        <div
+                          key={idx}
+                          className="flex items-center gap-1.5 bg-black/30 backdrop-blur border border-white/10 rounded-md px-2.5 py-1.5 hover:border-purple-500/40 transition-all duration-300 hover:scale-105"
+                        >
+                          <Icon
+                            className="text-base"
+                            style={{ color: tech.color }}
+                          />
+                          <span className="text-xs text-white/80 font-medium">
+                            {tech.name}
+                          </span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -831,22 +1000,59 @@ export const ExperienceSection = () => {
 
                   {position.achievements &&
                     position.achievements.length > 0 && (
-                      <ul className="space-y-2">
-                        {position.achievements
-                          .slice(0, 4)
-                          .map((achievement: string, achIndex: number) => (
-                            <li
-                              key={achIndex}
-                              className="flex items-start gap-2 text-sm text-white/80"
-                            >
-                              <FaCheckCircle
-                                className="text-purple-400 mt-1 flex-shrink-0"
-                                size={12}
-                              />
-                              <span>{achievement}</span>
-                            </li>
-                          ))}
-                      </ul>
+                      <>
+                        <ul className="space-y-2">
+                          {position.achievements
+                            .slice(0, 4)
+                            .map((achievement: string, achIndex: number) => (
+                              <li
+                                key={achIndex}
+                                className="flex items-start gap-2 text-sm text-white/80"
+                              >
+                                <FaCheckCircle
+                                  className="text-purple-400 mt-1 flex-shrink-0"
+                                  size={12}
+                                />
+                                <span>{achievement}</span>
+                              </li>
+                            ))}
+                        </ul>
+
+                        {/* Tech Stack Icons */}
+                        {(() => {
+                          const lastAchievement =
+                            position.achievements[
+                              position.achievements.length - 1
+                            ];
+                          const techIcons = getTechIcons(lastAchievement);
+
+                          if (techIcons.length > 0) {
+                            return (
+                              <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-white/10">
+                                {techIcons.map((tech: any, idx: number) => {
+                                  const Icon = tech.icon;
+                                  return (
+                                    <div
+                                      key={idx}
+                                      className="flex items-center gap-1.5 bg-black/30 backdrop-blur border border-white/10 rounded-md px-2 py-1 hover:border-purple-500/30 transition-all duration-300 hover:scale-105"
+                                      title={tech.name}
+                                    >
+                                      <Icon
+                                        className="text-base"
+                                        style={{ color: tech.color }}
+                                      />
+                                      <span className="text-xs text-white/70">
+                                        {tech.name}
+                                      </span>
+                                    </div>
+                                  );
+                                })}
+                              </div>
+                            );
+                          }
+                          return null;
+                        })()}
+                      </>
                     )}
                 </VerticalTimelineElement>
               ))}
