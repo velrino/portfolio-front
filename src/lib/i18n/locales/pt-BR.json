@@ -192,14 +192,14 @@
     "subtitle": "Inovação reconhecida e premiada nacionalmente",
     "featured": {
       "summit": {
-        "title": "Adapta Summit 2023",
+        "title": "Adapta Summit 2025",
         "award": "1º Lugar - R$ 100.000",
         "project": "Adapta Mídia",
         "description": "Vencedor do maior prêmio do evento com solução inovadora de mídia Out-of-Home impulsionada por Inteligência Artificial e Visão Computacional",
         "impact": "Solução revolucionária que transforma a publicidade urbana através de tecnologia de ponta"
       },
       "hackathon": {
-        "title": "Adapta Hackathon 2022",
+        "title": "Adapta Hackathon 2025",
         "award": "Premiado - R$ 40.000",
         "project": "Adapta Mídia",
         "description": "Premiado por desenvolver plataforma pioneira de análise e otimização de mídia exterior usando IA",
@@ -224,7 +224,7 @@
       },
       "award_photo": {
         "alt": "Denis Magalhães recebendo prêmio no Adapta Summit",
-        "caption": "Momento da premiação no Adapta Summit 2023"
+        "caption": "Momento da premiação no Adapta Summit 2025"
       }
     },
     "stats": {
@@ -482,7 +482,7 @@
     },
     "awards": {
       "title": "Prêmios & Reconhecimentos | Denis Magalhães",
-      "description": "Premiado com R$ 140.000 em competições nacionais de inovação tecnológica. Adapta Summit 2023 e Adapta Hackathon 2022."
+      "description": "Premiado com R$ 140.000 em competições nacionais de inovação tecnológica. Adapta Summit 2025 e Adapta Hackathon 2025."
     },
     "talks": {
       "title": "Palestras & Apresentações | Denis Magalhães",
