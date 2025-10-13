@@ -112,19 +112,6 @@ export const HeroSection = () => {
               {t("home.cta.primary")}
               <FaChevronRight className="group-hover:translate-x-1 transition-transform" />
             </a>
-            {/* <a
-              href="/Denis-Magalhaes-Velrino-Silva.pdf"
-              download
-              className="px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 w-full sm:w-auto text-center"
-            >
-              {t("home.cta.secondary")}
-            </a>
-            <a
-              href="#contact"
-              className="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-black transition-all duration-300 w-full sm:w-auto text-center"
-            >
-              {t("home.cta.contact")}
-            </a> */}
           </div>
         </motion.div>
       </div>
@@ -1191,59 +1178,79 @@ export const AwardsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="bg-black/20 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-8 md:p-12"
+          className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] min-h-screen flex items-center justify-center overflow-hidden"
         >
-          <div className="text-center mb-8">
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-3">
-              {t("awards.project.title")}
-            </h3>
-            <p className="text-xl text-purple-300 font-semibold mb-4">
-              {t("awards.project.tagline")}
-            </p>
-            <p className="text-lg text-white/80 max-w-3xl mx-auto leading-relaxed">
-              {t("awards.project.description")}
-            </p>
-          </div>
+          {/* Video Background */}
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source
+              src="/videos/feature_people_detected.mp4"
+              type="video/mp4"
+            />
+          </video>
 
-          {/* Features Grid */}
-          <div className="grid md:grid-cols-2 gap-4 mb-8">
-            {Array.isArray(t("awards.project.features")) &&
-              (t("awards.project.features") as unknown as string[]).map(
-                (feature: string, index: number) => (
-                  <div
-                    key={index}
-                    className="flex items-center gap-3 bg-black/20 rounded-lg p-4 border border-white/10"
-                  >
-                    <FaCheckCircle className="text-purple-400 flex-shrink-0" />
-                    <span className="text-white/90">{feature}</span>
-                  </div>
-                )
-              )}
-          </div>
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/75" />
 
-          {/* Demo CTA */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href={`https://${t("awards.project.website")}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:opacity-90 transition-all duration-300 shadow-lg flex items-center gap-2"
-            >
-              <FaExternalLinkAlt />
-              {t("awards.project.website")}
-              <FaChevronRight className="group-hover:translate-x-1 transition-transform" />
-            </a>
+          {/* Content */}
+          <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8 py-20">
+            <div className="text-center mb-12">
+              <h3 className="text-3xl md:text-4xl font-bold text-white mb-3">
+                {t("awards.project.title")}
+              </h3>
+              <p className="text-xl text-purple-300 font-semibold mb-4">
+                {t("awards.project.tagline")}
+              </p>
+              <p className="text-lg text-white/80 max-w-3xl mx-auto leading-relaxed">
+                {t("awards.project.description")}
+              </p>
+            </div>
 
-            <button className="px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 flex items-center gap-2">
-              <FaPlay />
-              {t("awards.project.demo.cta")}
-            </button>
-          </div>
+            {/* Features Grid */}
+            <div className="grid md:grid-cols-2 gap-4 mb-12 max-w-4xl mx-auto">
+              {Array.isArray(t("awards.project.features")) &&
+                (t("awards.project.features") as unknown as string[]).map(
+                  (feature: string, index: number) => (
+                    <div
+                      key={index}
+                      className="flex items-center gap-3 bg-black/40 backdrop-blur-md rounded-lg p-4 border border-white/20"
+                    >
+                      <FaCheckCircle className="text-purple-400 flex-shrink-0" />
+                      <span className="text-white/90">{feature}</span>
+                    </div>
+                  )
+                )}
+            </div>
 
-          <div className="mt-8 text-center">
-            <p className="text-sm text-white/60 italic">
-              {t("awards.project.award_photo.caption")}
-            </p>
+            {/* Demo CTA */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+              <a
+                href={`https://${t("awards.project.website")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:opacity-90 transition-all duration-300 shadow-lg flex items-center gap-2"
+              >
+                <FaExternalLinkAlt />
+                {t("awards.project.website")}
+                <FaChevronRight className="group-hover:translate-x-1 transition-transform" />
+              </a>
+
+              <button className="px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 flex items-center gap-2">
+                <FaPlay />
+                {t("awards.project.demo.cta")}
+              </button>
+            </div>
+
+            <div className="text-center">
+              <p className="text-sm text-white/60 italic">
+                {t("awards.project.award_photo.caption")}
+              </p>
+            </div>
           </div>
         </motion.div>
       </div>
@@ -1256,8 +1263,8 @@ export const TalksSection = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="talks" className="py-20 px-4 md:px-8 ">
-      <div className="max-w-6xl mx-auto">
+    <section id="talks" className="py-20  ">
+      <div className="mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -1276,68 +1283,86 @@ export const TalksSection = () => {
 
         {/* Featured Talk: ChatGPT + WhatsApp */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="bg-black/20 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-8 md:p-12 mb-12"
+          className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] min-h-screen flex items-center justify-center overflow-hidden mb-12"
         >
-          <div className="flex items-start justify-between flex-wrap gap-4 mb-6">
-            <div>
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
-                {t("talks.featured.chatgpt_whatsapp.title")}
-              </h3>
-              <p className="text-lg text-white/80 leading-relaxed mb-6">
-                {t("talks.featured.chatgpt_whatsapp.description")}
+          {/* Background Image */}
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: "url(/images/talk.png)" }}
+          />
+
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/80" />
+
+          {/* Content */}
+          <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8 py-20">
+            <div className="flex flex-col lg:flex-row items-start justify-between gap-6 mb-8">
+              <div className="flex-1">
+                <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
+                  {t("talks.featured.chatgpt_whatsapp.title")}
+                </h3>
+                <p className="text-base md:text-lg text-white/80 leading-relaxed">
+                  {t("talks.featured.chatgpt_whatsapp.description")}
+                </p>
+              </div>
+              <div className="bg-purple-600/20 p-4 rounded-xl border border-purple-500/30 backdrop-blur-sm">
+                <FaMicrophone className="text-3xl md:text-4xl text-purple-400" />
+              </div>
+            </div>
+
+            <div className="mb-8">
+              <h4 className="text-lg md:text-xl font-semibold text-white mb-4 flex items-center gap-2">
+                <FaCheckCircle className="text-purple-400" />
+                {t("talks.featured.chatgpt_whatsapp.topics.0") &&
+                  "Tópicos Abordados:"}
+              </h4>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                {Array.isArray(t("talks.featured.chatgpt_whatsapp.topics")) &&
+                  (
+                    t(
+                      "talks.featured.chatgpt_whatsapp.topics"
+                    ) as unknown as string[]
+                  ).map((topic: string, index: number) => (
+                    <div
+                      key={index}
+                      className="flex items-start gap-2 bg-black/40 backdrop-blur-sm rounded-lg p-3 md:p-4 border border-white/20 hover:border-purple-500/50 transition-all duration-300"
+                    >
+                      <span className="text-purple-400 mt-1 flex-shrink-0">
+                        ▸
+                      </span>
+                      <span className="text-white/90 text-sm md:text-base">
+                        {topic}
+                      </span>
+                    </div>
+                  ))}
+              </div>
+            </div>
+
+            <div className="bg-black/40 backdrop-blur-sm rounded-lg p-4 md:p-6 border border-white/20 mb-8">
+              <p className="text-sm md:text-base text-white/70 mb-2 font-semibold">
+                Tech Stack:
+              </p>
+              <p className="text-white/90 font-mono text-xs md:text-sm break-words">
+                {t("talks.featured.chatgpt_whatsapp.tech_stack")}
               </p>
             </div>
-            <div className="bg-purple-600/20 p-4 rounded-xl border border-purple-500/30">
-              <FaMicrophone className="text-3xl text-purple-400" />
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href={t("talks.featured.chatgpt_whatsapp.slides_url")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:opacity-90 transition-all duration-300 shadow-lg flex items-center justify-center gap-2 text-sm md:text-base"
+              >
+                <FaExternalLinkAlt />
+                {t("talks.featured.chatgpt_whatsapp.cta.slides")}
+                <FaChevronRight className="group-hover:translate-x-1 transition-transform" />
+              </a>
             </div>
-          </div>
-
-          <div className="mb-8">
-            <h4 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-              <FaCheckCircle className="text-purple-400" />
-              {t("talks.featured.chatgpt_whatsapp.topics.0") &&
-                "Tópicos Abordados:"}
-            </h4>
-            <div className="grid md:grid-cols-2 gap-3">
-              {Array.isArray(t("talks.featured.chatgpt_whatsapp.topics")) &&
-                (
-                  t(
-                    "talks.featured.chatgpt_whatsapp.topics"
-                  ) as unknown as string[]
-                ).map((topic: string, index: number) => (
-                  <div
-                    key={index}
-                    className="flex items-start gap-2 bg-black/20 rounded-lg p-3 border border-white/10"
-                  >
-                    <span className="text-purple-400 mt-1">▸</span>
-                    <span className="text-white/90 text-sm">{topic}</span>
-                  </div>
-                ))}
-            </div>
-          </div>
-
-          <div className="bg-black/20 rounded-lg p-4 border border-white/10 mb-6">
-            <p className="text-sm text-white/70 mb-1">Tech Stack:</p>
-            <p className="text-white/90 font-mono text-sm">
-              {t("talks.featured.chatgpt_whatsapp.tech_stack")}
-            </p>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-4">
-            <a
-              href={t("talks.featured.chatgpt_whatsapp.slides_url")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:opacity-90 transition-all duration-300 shadow-lg flex items-center justify-center gap-2"
-            >
-              <FaExternalLinkAlt />
-              {t("talks.featured.chatgpt_whatsapp.cta.slides")}
-              <FaChevronRight className="group-hover:translate-x-1 transition-transform" />
-            </a>
           </div>
         </motion.div>
       </div>
