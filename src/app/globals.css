@@ -108,7 +108,7 @@
   --primary-foreground: oklch(1 0 0);
 
   /* Darker navy for secondary */
-  --secondary: oklch(0.20 0.08 280);
+  --secondary: oklch(0.2 0.08 280);
   --secondary-foreground: oklch(0.985 0 0);
 
   --muted: oklch(0.25 0.05 280);
@@ -154,4 +154,15 @@
   * {
     box-sizing: border-box;
   }
+}
+
+.outlined-text {
+  /* outline */
+  -webkit-text-stroke: 1px white;
+  -webkit-text-fill-color: transparent;
+
+  color: white;
+
+  font-family: "Arial", sans-serif;
+  font-weight: 900;
 }

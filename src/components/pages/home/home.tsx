@@ -61,7 +61,14 @@ export const AboutSection = () => {
 export const SkillsSection = () => {
   return (
     <div className="min-h-screen">
-      <div>Skills</div>
+      <div className="text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-white">
+          Minhas <span className="outlined-text">Habilidades</span>
+        </h2>
+        <p className="text-white/80 mt-4 max-w-2xl mx-auto text-sm md:text-base">
+          Algumas dos meus conhecimentos/Habilidades recorrentes
+        </p>
+      </div>
       <NestedOrbitSystem />
     </div>
   );
