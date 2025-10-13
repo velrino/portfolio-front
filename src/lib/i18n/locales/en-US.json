@@ -32,34 +32,34 @@
   },
   "about": {
     "title": "About Me",
-    "headline": "Software Engineer with Entrepreneurial DNA",
-    "subtitle": "Expert in transforming complex technical challenges into exponential growth opportunities",
-    "intro": "Full Stack Developer with an entrepreneurial mindset, resilient profile, and focus on overcoming technical challenges. Proactive, adaptable, and committed to continuous learning.",
+    "headline": "Expert at Solving Complex Problems with Technology",
+    "subtitle": "I transform business challenges into scalable solutions that generate real results and measurable impact",
+    "intro": "My passion isn't writing code — it's solving problems. With over a decade turning complex challenges into growth opportunities, I've learned that technology is just the means, not the end. What drives me is seeing businesses thrive, teams grow, and ideas come to life.",
     "photo": {
-      "caption": "MongoDB 2024 - I love MongoDB and technologies that drive innovation"
+      "caption": "MongoDB 2024 - I love technologies that solve real business problems"
     },
     "journey": {
-      "title": "My Journey",
-      "p1": "Throughout my career, I've been architecting, scaling up, and engineering projects from scratch, besides managing development teams and Scrum agile procedures.",
-      "p2": "I worked with PHP and Java since the beginning of my career. Eventually, a little over 5 years ago I migrated to JavaScript/TypeScript, using frameworks like React, Angular, React Native, Node.js Express, Nest.js, among others.",
-      "p3": "I've also been coding with Flutter, Python, and Golang at several moments when teams decided to use those languages and frameworks."
+      "title": "How I Solve Problems",
+      "p1": "My approach starts with questions, not code. I deeply understand the business problem before proposing any technical solution. This mindset allowed me to architect and scale projects from scratch that became pillars of fast-growing companies.",
+      "p2": "I master multiple technologies — JavaScript/TypeScript, React, Node.js, Python, Golang, Flutter — but not as a hobby. Each tool in my arsenal was chosen because it solves a specific type of problem better than others. I don't get attached to technologies; I get attached to results.",
+      "p3": "I lead teams, manage agile procedures, and make strategic technical decisions as a CTO. But my greatest value is in connecting the dots: between what the business needs, what technology can do, and what the team can deliver."
     },
     "integrations": {
-      "title": "Integrations & Technologies",
-      "description": "I've integrated applications with various services and APIs that were essential for success in efficiency, usability, and experience:",
+      "title": "Solution Arsenal",
+      "description": "Each integration below solved a specific business problem — from automating processes to scaling operations globally:",
       "categories": {
-        "ai": "AI & Machine Learning: OpenAI APIs, ChatGPT, Dall-E, Whisper, Leonardo AI, Fine Tuning, LLM",
-        "payments": "Digital Payments: Stripe, Cryptomus, NoxPay, Apple Store API",
-        "communication": "Communication: Twilio (SMS & WhatsApp), SES, SendGrid, SendinBlue",
-        "infrastructure": "Infrastructure: Redis (Pub/Sub), RabbitMQ, SQS, SNS, ElasticSearch",
-        "cloud": "Cloud & Storage: AWS, GCP, Heroku, Cloudinary, S3, Firebase",
-        "monitoring": "Monitoring: New Relic, DataDog, Grafana",
-        "security": "Security: HaveIBeenPwned, Leakcheck, Dehashed APIs"
+        "ai": "Intelligence & Automation: OpenAI, ChatGPT, Dall-E, Whisper, Leonardo AI — eliminating manual work and amplifying human capabilities",
+        "payments": "Global Monetization: Stripe, Cryptomus, NoxPay, Apple Store API — processing millions in secure transactions",
+        "communication": "Scale Reach: Twilio, WhatsApp API, SES, SendGrid — connecting businesses with millions of users",
+        "infrastructure": "Critical Performance: Redis, RabbitMQ, SQS, SNS, ElasticSearch — ensuring speed even under pressure",
+        "cloud": "Scalable Infrastructure: AWS, GCP, Heroku, S3, Firebase — from MVP to global scale",
+        "monitoring": "Total Visibility: New Relic, DataDog, Grafana — anticipating problems before users feel them",
+        "security": "Proactive Protection: HaveIBeenPwned, Leakcheck, Dehashed — securing data and reputation"
       }
     },
     "community": {
-      "title": "Community & Education",
-      "description": "I've always believed in the power of sharing knowledge. Throughout my career, I've organized several workshops and meetups to teach software development and create networking opportunities for those starting out or wanting to learn more.",
+      "title": "Multiplying Impact",
+      "description": "I believe knowledge not shared is knowledge wasted. That's why I transformed the habit of learning into a commitment to teach. Each workshop is a chance to plant seeds of transformation in other careers.",
       "workshops": {
         "beetech": {
           "title": "Frontend & Backend Workshop - Beetech",
@@ -80,9 +80,9 @@
       },
       "passion": "I did this for them today, and I hope they can do the same for others in the future. It's rewarding to share knowledge and see people growing professionally."
     },
-    "pride": "I'm very proud that several projects I helped create from scratch have been growing up and selling so fast, making those startups earn big clients around the world.",
-    "philosophy": "I believe I have much more to accomplish because I've always been focused, determined, open-minded, and electrifyingly passionate.",
-    "cta": "You can count on me. Let's keep in touch and change the world for better!"
+    "pride": "My greatest pride isn't the lines of code I wrote — it's the companies that scaled, the teams that led with autonomy, and the impossible problems that became success stories. Projects that started as sketches on whiteboards now serve millions of users globally.",
+    "philosophy": "I'm driven by challenges that seem too big, deadlines that seem too tight, and problems no one has solved yet. My mindset is simple: if there's a better way, I'll find it. If there isn't, I'll create it.",
+    "cta": "If you have a complex problem that needs someone who thinks beyond the obvious, let's talk. I won't promise it'll be easy — but I will promise it'll get solved."
   },
   "experience": {
     "title": "Professional Experience",

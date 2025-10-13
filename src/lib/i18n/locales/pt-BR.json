@@ -32,34 +32,34 @@
   },
   "about": {
     "title": "Sobre Mim",
-    "headline": "Engenheiro de Software com DNA Empreendedor",
-    "subtitle": "Especialista em transformar desafios técnicos complexos em oportunidades de crescimento exponencial",
-    "intro": "Full Stack Developer com perfil empreendedor, resiliente e focado em superar desafios técnicos. Proativo, adaptável e comprometido com o aprendizado contínuo.",
+    "headline": "Especialista em Resolver Problemas Complexos com Tecnologia",
+    "subtitle": "Transformo desafios de negócio em soluções escaláveis que geram resultados reais e impacto mensurável",
+    "intro": "Minha paixão não é escrever código — é resolver problemas. Com mais de uma década transformando desafios complexos em oportunidades de crescimento, aprendi que tecnologia é apenas o meio, não o fim. O que me move é ver negócios prosperarem, equipes crescerem e ideias ganharem vida.",
     "photo": {
-      "caption": "MongoDB 2024 - Adoro MongoDB e tecnologias que impulsionam inovação"
+      "caption": "MongoDB 2024 - Adoro tecnologias que resolvem problemas reais de negócio"
     },
     "journey": {
-      "title": "Minha Jornada",
-      "p1": "Ao longo da minha carreira, arquitetei, escalei e engenhei projetos do zero, além de gerenciar equipes de desenvolvimento e procedimentos ágeis Scrum.",
-      "p2": "Trabalhei com PHP e Java no início da carreira. Há mais de 5 anos, migrei para JavaScript/TypeScript, utilizando frameworks como React, Angular, React Native, Node.js Express, Nest.js, entre outros.",
-      "p3": "Também programei com Flutter, Python e Golang em diversos momentos quando as equipes decidiram utilizar essas linguagens e frameworks."
+      "title": "Como Eu Resolvo Problemas",
+      "p1": "Minha abordagem começa com perguntas, não com código. Entendo profundamente o problema de negócio antes de propor qualquer solução técnica. Essa mentalidade me permitiu arquitetar e escalar projetos do zero que se tornaram pilares de empresas em crescimento acelerado.",
+      "p2": "Domino múltiplas tecnologias — JavaScript/TypeScript, React, Node.js, Python, Golang, Flutter — mas não por colecionismo. Cada ferramenta no meu arsenal foi escolhida porque resolve um tipo específico de problema melhor que as outras. Não me apego a tecnologias; me apego a resultados.",
+      "p3": "Lidero equipes, gerencio procedimentos ágeis e tomo decisões técnicas estratégicas como CTO. Mas meu maior valor está em conectar pontos: entre o que o negócio precisa, o que a tecnologia pode fazer e o que a equipe pode entregar."
     },
     "integrations": {
-      "title": "Integrações & Tecnologias",
-      "description": "Integrei aplicações com diversos serviços e APIs que foram fundamentais para o sucesso em eficiência, usabilidade e experiência:",
+      "title": "Arsenal de Soluções",
+      "description": "Cada integração abaixo resolveu um problema específico de negócio — desde automatizar processos até escalar operações globalmente:",
       "categories": {
-        "ai": "IA & Machine Learning: OpenAI APIs, ChatGPT, Dall-E, Whisper, Leonardo AI, Fine Tuning, LLM",
-        "payments": "Pagamentos Digitais: Stripe, Cryptomus, NoxPay, Apple Store API",
-        "communication": "Comunicação: Twilio (SMS e WhatsApp), SES, SendGrid, SendinBlue",
-        "infrastructure": "Infraestrutura: Redis (Pub/Sub), RabbitMQ, SQS, SNS, ElasticSearch",
-        "cloud": "Cloud & Storage: AWS, GCP, Heroku, Cloudinary, S3, Firebase",
-        "monitoring": "Monitoramento: New Relic, DataDog, Grafana",
-        "security": "Segurança: HaveIBeenPwned, Leakcheck, Dehashed APIs"
+        "ai": "Inteligência & Automação: OpenAI, ChatGPT, Dall-E, Whisper, Leonardo AI — para eliminar trabalho manual e amplificar capacidades humanas",
+        "payments": "Monetização Global: Stripe, Cryptomus, NoxPay, Apple Store API — processando milhões em transações com segurança",
+        "communication": "Alcance em Escala: Twilio, WhatsApp API, SES, SendGrid — conectando empresas com milhões de usuários",
+        "infrastructure": "Performance Crítica: Redis, RabbitMQ, SQS, SNS, ElasticSearch — garantindo velocidade mesmo sob pressão",
+        "cloud": "Infraestrutura Escalável: AWS, GCP, Heroku, S3, Firebase — do MVP à escala global",
+        "monitoring": "Visibilidade Total: New Relic, DataDog, Grafana — antecipando problemas antes dos usuários sentirem",
+        "security": "Proteção Proativa: HaveIBeenPwned, Leakcheck, Dehashed — blindando dados e reputação"
       }
     },
     "community": {
-      "title": "Comunidade & Educação",
-      "description": "Sempre acreditei no poder de compartilhar conhecimento. Ao longo da minha carreira, organizei diversos workshops e meetups para ensinar desenvolvimento de software e criar oportunidades de networking para quem está começando ou quer aprender mais.",
+      "title": "Multiplicando Impacto",
+      "description": "Acredito que conhecimento não guardado é conhecimento desperdiçado. Por isso, transformei o hábito de aprender em um compromisso de ensinar. Cada workshop é uma chance de plantar sementes de transformação em outras carreiras.",
       "workshops": {
         "beetech": {
           "title": "Workshop Frontend & Backend - Beetech",
@@ -80,9 +80,9 @@
       },
       "passion": "Fiz isto por eles hoje, e espero que eles possam fazer o mesmo para outras pessoas futuramente. É gratificante compartilhar conhecimento e ver pessoas crescendo profissionalmente."
     },
-    "pride": "Tenho muito orgulho de que vários projetos que ajudei a criar do zero cresceram e venderam tão rápido, fazendo essas startups conquistarem grandes clientes ao redor do mundo.",
-    "philosophy": "Acredito que tenho muito mais a realizar porque sempre fui focado, determinado, de mente aberta e apaixonadamente elétrico.",
-    "cta": "Você pode contar comigo. Vamos manter contato e mudar o mundo para melhor!"
+    "pride": "Meu maior orgulho não são as linhas de código que escrevi — são as empresas que escalaram, os times que lideraram com autonomia, e os problemas impossíveis que se tornaram cases de sucesso. Projetos que começaram como sketches em quadros brancos hoje servem milhões de usuários globalmente.",
+    "philosophy": "Sou movido por desafios que parecem grandes demais, prazos que parecem curtos demais, e problemas que ninguém resolveu ainda. Minha mentalidade é simples: se existe uma maneira melhor, eu vou encontrá-la. Se não existe, eu vou criá-la.",
+    "cta": "Se você tem um problema complexo que precisa de alguém que pense além do óbvio, vamos conversar. Não prometo que será fácil — mas prometo que será resolvido."
   },
   "experience": {
     "title": "Experiência Profissional",

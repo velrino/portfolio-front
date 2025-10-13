@@ -21,7 +21,22 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
   FaUsers,
+  FaBrain,
+  FaCreditCard,
+  FaComments,
+  FaServer,
+  FaCloud,
+  FaChartLine,
+  FaShieldAlt,
 } from "react-icons/fa";
+import {
+  SiOpenai,
+  SiStripe,
+  SiTwilio,
+  SiRedis,
+  SiAmazon,
+  SiGooglecloud,
+} from "react-icons/si";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -120,15 +135,6 @@ export const HeroSection = () => {
 export const AboutSection = () => {
   const { t } = useTranslation();
 
-  const integrationCategories = [
-    "ai",
-    "payments",
-    "communication",
-    "infrastructure",
-    "cloud",
-    "monitoring",
-  ];
-
   return (
     <section id="about" className="min-h-screen py-20 px-4 md:px-8">
       <div className="max-w-7xl mx-auto">
@@ -167,7 +173,7 @@ export const AboutSection = () => {
               viewport={{ once: true }}
               className="float-right ml-6 mb-6 w-full md:w-[350px]"
             >
-              <div className="relative group overflow-hidden rounded-xl border-2 border-purple-500/30 group-hover:border-purple-500/60 transition-all duration-300">
+              <div className="relative group overflow-hidden rounded-xl">
                 <img
                   src="/images/me.jpeg"
                   alt="Denis Magalhães no MongoDB 2024"
@@ -200,25 +206,339 @@ export const AboutSection = () => {
           </div>
 
           <div className="bg-black/20 backdrop-blur-lg border border-white/10 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
+            <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
               <FaCode className="text-purple-400" />
               {t("about.integrations.title")}
             </h3>
-            <p className="text-white/80 mb-6">
+            <p className="text-white/80 mb-8">
               {t("about.integrations.description")}
             </p>
 
-            <div className="grid md:grid-cols-2 gap-4">
-              {integrationCategories.map((category) => (
-                <div
-                  key={category}
-                  className="bg-black/20 rounded-lg p-4 border border-white/10"
-                >
-                  <p className="text-sm text-white/90">
-                    {t(`about.integrations.categories.${category}` as any)}
-                  </p>
+            <div className="space-y-6">
+              {/* AI & Machine Learning */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="group"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <FaBrain className="text-3xl text-purple-400 group-hover:scale-110 transition-transform" />
+                  <h4 className="text-lg font-bold text-white">
+                    {t("about.integrations.categories.ai").split(":")[0]}
+                  </h4>
                 </div>
-              ))}
+                <p className="text-white/80 text-sm mb-3 ml-12">
+                  {t("about.integrations.categories.ai").split("—")[1]}
+                </p>
+                <div className="flex flex-wrap gap-3 ml-12">
+                  {[
+                    { icon: SiOpenai, name: "OpenAI", color: "#10a37f" },
+                    { icon: SiOpenai, name: "ChatGPT", color: "#10a37f" },
+                    { icon: SiOpenai, name: "Dall-E", color: "#10a37f" },
+                    { icon: FaBrain, name: "LLM", color: "#a855f7" },
+                  ].map((tech, idx) => {
+                    const Icon = tech.icon;
+                    return (
+                      <div
+                        key={idx}
+                        className="group/tech flex items-center gap-2 bg-black/30 backdrop-blur border border-white/10 rounded-lg px-3 py-2 hover:border-purple-500/50 transition-all duration-300 hover:scale-105"
+                      >
+                        <Icon
+                          className="text-xl group-hover/tech:scale-110 transition-transform"
+                          style={{ color: tech.color }}
+                        />
+                        <span className="text-xs text-white/90 font-medium">
+                          {tech.name}
+                        </span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </motion.div>
+
+              {/* Payments */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="group"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <FaCreditCard className="text-3xl text-green-400 group-hover:scale-110 transition-transform" />
+                  <h4 className="text-lg font-bold text-white">
+                    {t("about.integrations.categories.payments").split(":")[0]}
+                  </h4>
+                </div>
+                <p className="text-white/80 text-sm mb-3 ml-12">
+                  {t("about.integrations.categories.payments").split("—")[1]}
+                </p>
+                <div className="flex flex-wrap gap-3 ml-12">
+                  {[
+                    { icon: SiStripe, name: "Stripe", color: "#635bff" },
+                    { icon: FaCreditCard, name: "Cryptomus", color: "#f59e0b" },
+                    { icon: FaCreditCard, name: "NoxPay", color: "#10b981" },
+                    { icon: FaCreditCard, name: "Apple Store", color: "#000" },
+                  ].map((tech, idx) => {
+                    const Icon = tech.icon;
+                    return (
+                      <div
+                        key={idx}
+                        className="group/tech flex items-center gap-2 bg-black/30 backdrop-blur border border-white/10 rounded-lg px-3 py-2 hover:border-green-500/50 transition-all duration-300 hover:scale-105"
+                      >
+                        <Icon
+                          className="text-xl group-hover/tech:scale-110 transition-transform"
+                          style={{ color: tech.color }}
+                        />
+                        <span className="text-xs text-white/90 font-medium">
+                          {tech.name}
+                        </span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </motion.div>
+
+              {/* Communication */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="group"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <FaComments className="text-3xl text-blue-400 group-hover:scale-110 transition-transform" />
+                  <h4 className="text-lg font-bold text-white">
+                    {
+                      t("about.integrations.categories.communication").split(
+                        ":"
+                      )[0]
+                    }
+                  </h4>
+                </div>
+                <p className="text-white/80 text-sm mb-3 ml-12">
+                  {
+                    t("about.integrations.categories.communication").split(
+                      "—"
+                    )[1]
+                  }
+                </p>
+                <div className="flex flex-wrap gap-3 ml-12">
+                  {[
+                    { icon: SiTwilio, name: "Twilio", color: "#f22f46" },
+                    { icon: FaComments, name: "WhatsApp", color: "#25d366" },
+                    { icon: FaComments, name: "SES", color: "#ff9900" },
+                    { icon: FaComments, name: "SendGrid", color: "#1a82e2" },
+                  ].map((tech, idx) => {
+                    const Icon = tech.icon;
+                    return (
+                      <div
+                        key={idx}
+                        className="group/tech flex items-center gap-2 bg-black/30 backdrop-blur border border-white/10 rounded-lg px-3 py-2 hover:border-blue-500/50 transition-all duration-300 hover:scale-105"
+                      >
+                        <Icon
+                          className="text-xl group-hover/tech:scale-110 transition-transform"
+                          style={{ color: tech.color }}
+                        />
+                        <span className="text-xs text-white/90 font-medium">
+                          {tech.name}
+                        </span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </motion.div>
+
+              {/* Infrastructure */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="group"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <FaServer className="text-3xl text-orange-400 group-hover:scale-110 transition-transform" />
+                  <h4 className="text-lg font-bold text-white">
+                    {
+                      t("about.integrations.categories.infrastructure").split(
+                        ":"
+                      )[0]
+                    }
+                  </h4>
+                </div>
+                <p className="text-white/80 text-sm mb-3 ml-12">
+                  {
+                    t("about.integrations.categories.infrastructure").split(
+                      "—"
+                    )[1]
+                  }
+                </p>
+                <div className="flex flex-wrap gap-3 ml-12">
+                  {[
+                    { icon: SiRedis, name: "Redis", color: "#dc382d" },
+                    { icon: FaServer, name: "RabbitMQ", color: "#ff6600" },
+                    { icon: FaServer, name: "SQS", color: "#ff9900" },
+                    { icon: FaServer, name: "SNS", color: "#ff9900" },
+                    { icon: FaServer, name: "ElasticSearch", color: "#005571" },
+                  ].map((tech, idx) => {
+                    const Icon = tech.icon;
+                    return (
+                      <div
+                        key={idx}
+                        className="group/tech flex items-center gap-2 bg-black/30 backdrop-blur border border-white/10 rounded-lg px-3 py-2 hover:border-orange-500/50 transition-all duration-300 hover:scale-105"
+                      >
+                        <Icon
+                          className="text-xl group-hover/tech:scale-110 transition-transform"
+                          style={{ color: tech.color }}
+                        />
+                        <span className="text-xs text-white/90 font-medium">
+                          {tech.name}
+                        </span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </motion.div>
+
+              {/* Cloud */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="group"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <FaCloud className="text-3xl text-cyan-400 group-hover:scale-110 transition-transform" />
+                  <h4 className="text-lg font-bold text-white">
+                    {t("about.integrations.categories.cloud").split(":")[0]}
+                  </h4>
+                </div>
+                <p className="text-white/80 text-sm mb-3 ml-12">
+                  {t("about.integrations.categories.cloud").split("—")[1]}
+                </p>
+                <div className="flex flex-wrap gap-3 ml-12">
+                  {[
+                    { icon: SiAmazon, name: "AWS", color: "#ff9900" },
+                    { icon: SiGooglecloud, name: "GCP", color: "#4285f4" },
+                    { icon: FaCloud, name: "Heroku", color: "#430098" },
+                    { icon: FaCloud, name: "S3", color: "#569a31" },
+                    { icon: FaCloud, name: "Firebase", color: "#ffca28" },
+                  ].map((tech, idx) => {
+                    const Icon = tech.icon;
+                    return (
+                      <div
+                        key={idx}
+                        className="group/tech flex items-center gap-2 bg-black/30 backdrop-blur border border-white/10 rounded-lg px-3 py-2 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105"
+                      >
+                        <Icon
+                          className="text-xl group-hover/tech:scale-110 transition-transform"
+                          style={{ color: tech.color }}
+                        />
+                        <span className="text-xs text-white/90 font-medium">
+                          {tech.name}
+                        </span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </motion.div>
+
+              {/* Monitoring */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                viewport={{ once: true }}
+                className="group"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <FaChartLine className="text-3xl text-pink-400 group-hover:scale-110 transition-transform" />
+                  <h4 className="text-lg font-bold text-white">
+                    {
+                      t("about.integrations.categories.monitoring").split(
+                        ":"
+                      )[0]
+                    }
+                  </h4>
+                </div>
+                <p className="text-white/80 text-sm mb-3 ml-12">
+                  {t("about.integrations.categories.monitoring").split("—")[1]}
+                </p>
+                <div className="flex flex-wrap gap-3 ml-12">
+                  {[
+                    { icon: FaChartLine, name: "New Relic", color: "#008c99" },
+                    { icon: FaChartLine, name: "DataDog", color: "#632ca6" },
+                    { icon: FaChartLine, name: "Grafana", color: "#f46800" },
+                  ].map((tech, idx) => {
+                    const Icon = tech.icon;
+                    return (
+                      <div
+                        key={idx}
+                        className="group/tech flex items-center gap-2 bg-black/30 backdrop-blur border border-white/10 rounded-lg px-3 py-2 hover:border-pink-500/50 transition-all duration-300 hover:scale-105"
+                      >
+                        <Icon
+                          className="text-xl group-hover/tech:scale-110 transition-transform"
+                          style={{ color: tech.color }}
+                        />
+                        <span className="text-xs text-white/90 font-medium">
+                          {tech.name}
+                        </span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </motion.div>
+
+              {/* Security */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+                viewport={{ once: true }}
+                className="group"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <FaShieldAlt className="text-3xl text-red-400 group-hover:scale-110 transition-transform" />
+                  <h4 className="text-lg font-bold text-white">
+                    {t("about.integrations.categories.security").split(":")[0]}
+                  </h4>
+                </div>
+                <p className="text-white/80 text-sm mb-3 ml-12">
+                  {t("about.integrations.categories.security").split("—")[1]}
+                </p>
+                <div className="flex flex-wrap gap-3 ml-12">
+                  {[
+                    {
+                      icon: FaShieldAlt,
+                      name: "HaveIBeenPwned",
+                      color: "#ef4444",
+                    },
+                    { icon: FaShieldAlt, name: "Leakcheck", color: "#f59e0b" },
+                    { icon: FaShieldAlt, name: "Dehashed", color: "#dc2626" },
+                  ].map((tech, idx) => {
+                    const Icon = tech.icon;
+                    return (
+                      <div
+                        key={idx}
+                        className="group/tech flex items-center gap-2 bg-black/30 backdrop-blur border border-white/10 rounded-lg px-3 py-2 hover:border-red-500/50 transition-all duration-300 hover:scale-105"
+                      >
+                        <Icon
+                          className="text-xl group-hover/tech:scale-110 transition-transform"
+                          style={{ color: tech.color }}
+                        />
+                        <span className="text-xs text-white/90 font-medium">
+                          {tech.name}
+                        </span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </motion.div>
             </div>
           </div>
 
@@ -801,25 +1121,6 @@ export const SkillsSection = () => {
       </div>
 
       <NestedOrbitSystem />
-
-      {/* AWS Certification */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-        className="max-w-4xl mx-auto mt-20 px-4"
-      >
-        <div className="bg-black/20 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-8 text-center">
-          <FaAward className="text-5xl text-purple-400 mx-auto mb-4" />
-          <h3 className="text-2xl font-bold text-white mb-2">
-            {t("skills.certifications.aws.title")}
-          </h3>
-          <p className="text-white/80 mb-4 leading-relaxed max-w-2xl mx-auto">
-            {t("skills.certifications.aws.description")}
-          </p>
-        </div>
-      </motion.div>
     </section>
   );
 };
