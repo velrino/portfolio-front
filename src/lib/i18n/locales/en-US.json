@@ -35,6 +35,9 @@
     "headline": "Software Engineer with Entrepreneurial DNA",
     "subtitle": "Expert in transforming complex technical challenges into exponential growth opportunities",
     "intro": "Full Stack Developer with an entrepreneurial mindset, resilient profile, and focus on overcoming technical challenges. Proactive, adaptable, and committed to continuous learning.",
+    "photo": {
+      "caption": "MongoDB 2024 - I love MongoDB and technologies that drive innovation"
+    },
     "journey": {
       "title": "My Journey",
       "p1": "Throughout my career, I've been architecting, scaling up, and engineering projects from scratch, besides managing development teams and Scrum agile procedures.",
@@ -53,6 +56,29 @@
         "monitoring": "Monitoring: New Relic, DataDog, Grafana",
         "security": "Security: HaveIBeenPwned, Leakcheck, Dehashed APIs"
       }
+    },
+    "community": {
+      "title": "Community & Education",
+      "description": "I've always believed in the power of sharing knowledge. Throughout my career, I've organized several workshops and meetups to teach software development and create networking opportunities for those starting out or wanting to learn more.",
+      "workshops": {
+        "beetech": {
+          "title": "Frontend & Backend Workshop - Beetech",
+          "description": "In-person workshop teaching full-stack development to the tech community at Beetech (https://beetech.global/)"
+        },
+        "senai": {
+          "title": "Git & Version Control Workshop - SENAI",
+          "description": "Training on version control and best practices with Git at SENAI"
+        },
+        "itau": {
+          "title": "Mobile Development Workshop - Itaú",
+          "description": "Internal event at Itaú focused on mobile development and networking among developers"
+        },
+        "fatec": {
+          "title": "Flutter + AdonisJS - FATEC Zona Sul",
+          "description": "Presentation on Flutter integrated with AdonisJS, market trends, and emerging technologies for students (03/04/2025)"
+        }
+      },
+      "passion": "I did this for them today, and I hope they can do the same for others in the future. It's rewarding to share knowledge and see people growing professionally."
     },
     "pride": "I'm very proud that several projects I helped create from scratch have been growing up and selling so fast, making those startups earn big clients around the world.",
     "philosophy": "I believe I have much more to accomplish because I've always been focused, determined, open-minded, and electrifyingly passionate.",

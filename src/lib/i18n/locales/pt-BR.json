@@ -35,6 +35,9 @@
     "headline": "Engenheiro de Software com DNA Empreendedor",
     "subtitle": "Especialista em transformar desafios técnicos complexos em oportunidades de crescimento exponencial",
     "intro": "Full Stack Developer com perfil empreendedor, resiliente e focado em superar desafios técnicos. Proativo, adaptável e comprometido com o aprendizado contínuo.",
+    "photo": {
+      "caption": "MongoDB 2024 - Adoro MongoDB e tecnologias que impulsionam inovação"
+    },
     "journey": {
       "title": "Minha Jornada",
       "p1": "Ao longo da minha carreira, arquitetei, escalei e engenhei projetos do zero, além de gerenciar equipes de desenvolvimento e procedimentos ágeis Scrum.",
@@ -53,6 +56,29 @@
         "monitoring": "Monitoramento: New Relic, DataDog, Grafana",
         "security": "Segurança: HaveIBeenPwned, Leakcheck, Dehashed APIs"
       }
+    },
+    "community": {
+      "title": "Comunidade & Educação",
+      "description": "Sempre acreditei no poder de compartilhar conhecimento. Ao longo da minha carreira, organizei diversos workshops e meetups para ensinar desenvolvimento de software e criar oportunidades de networking para quem está começando ou quer aprender mais.",
+      "workshops": {
+        "beetech": {
+          "title": "Workshop Frontend & Backend - Beetech",
+          "description": "Workshop presencial ensinando desenvolvimento full-stack para a comunidade tech na Beetech (https://beetech.global/)"
+        },
+        "senai": {
+          "title": "Workshop Git & Versionamento - SENAI",
+          "description": "Capacitação em controle de versão e boas práticas com Git no SENAI"
+        },
+        "itau": {
+          "title": "Workshop Mobile Development - Itaú",
+          "description": "Evento interno no Itaú focado em desenvolvimento mobile e networking entre desenvolvedores"
+        },
+        "fatec": {
+          "title": "Flutter + AdonisJS - FATEC Zona Sul",
+          "description": "Apresentação sobre Flutter integrado com AdonisJS, tendências de mercado e tecnologias emergentes para estudantes (04/03/2025)"
+        }
+      },
+      "passion": "Fiz isto por eles hoje, e espero que eles possam fazer o mesmo para outras pessoas futuramente. É gratificante compartilhar conhecimento e ver pessoas crescendo profissionalmente."
     },
     "pride": "Tenho muito orgulho de que vários projetos que ajudei a criar do zero cresceram e venderam tão rápido, fazendo essas startups conquistarem grandes clientes ao redor do mundo.",
     "philosophy": "Acredito que tenho muito mais a realizar porque sempre fui focado, determinado, de mente aberta e apaixonadamente elétrico.",

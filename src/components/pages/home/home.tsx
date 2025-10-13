@@ -20,6 +20,7 @@ import {
   FaCalendarAlt,
   FaEnvelope,
   FaMapMarkerAlt,
+  FaUsers,
 } from "react-icons/fa";
 import {
   VerticalTimeline,
@@ -130,7 +131,7 @@ export const AboutSection = () => {
 
   return (
     <section id="about" className="min-h-screen py-20 px-4 md:px-8">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -156,7 +157,30 @@ export const AboutSection = () => {
           viewport={{ once: true }}
           className="space-y-8"
         >
+          {/* Intro & Journey with Photo */}
           <div className="bg-black/20 backdrop-blur-lg border border-white/10 rounded-2xl p-8">
+            {/* Photo Float Right */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="float-right ml-6 mb-6 w-full md:w-[350px]"
+            >
+              <div className="relative group overflow-hidden rounded-xl border-2 border-purple-500/30 group-hover:border-purple-500/60 transition-all duration-300">
+                <img
+                  src="/images/me.jpeg"
+                  alt="Denis Magalhães no MongoDB 2024"
+                  className="w-full aspect-[3/4] object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <p className="text-white font-semibold text-xs leading-relaxed">
+                    {t("about.photo.caption")}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
             <p className="text-lg text-white/90 leading-relaxed mb-6">
               {t("about.intro")}
             </p>
@@ -170,6 +194,9 @@ export const AboutSection = () => {
               <p>{t("about.journey.p2")}</p>
               <p>{t("about.journey.p3")}</p>
             </div>
+
+            {/* Clear float */}
+            <div className="clear-both"></div>
           </div>
 
           <div className="bg-black/20 backdrop-blur-lg border border-white/10 rounded-2xl p-8">
@@ -194,6 +221,125 @@ export const AboutSection = () => {
               ))}
             </div>
           </div>
+
+          {/* Community & Workshops Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-black/20 backdrop-blur-lg border border-white/10 rounded-2xl p-8"
+          >
+            <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
+              <FaUsers className="text-purple-400" />
+              {t("about.community.title")}
+            </h3>
+            <p className="text-lg text-white/90 leading-relaxed mb-8">
+              {t("about.community.description")}
+            </p>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="group relative overflow-hidden rounded-xl"
+              >
+                <img
+                  src="/images/meetup-1.jpg"
+                  alt="Workshop na Beetech"
+                  className="w-full h-[280px] object-cover rounded-xl transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex items-end p-4">
+                  <div>
+                    <p className="text-white font-bold text-sm mb-1">
+                      {t("about.community.workshops.beetech.title")}
+                    </p>
+                    <p className="text-white/80 text-xs">
+                      {t("about.community.workshops.beetech.description")}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="group relative overflow-hidden rounded-xl"
+              >
+                <img
+                  src="/images/meetup-2.jpg"
+                  alt="Workshop no SENAI"
+                  className="w-full h-[280px] object-cover rounded-xl transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex items-end p-4">
+                  <div>
+                    <p className="text-white font-bold text-sm mb-1">
+                      {t("about.community.workshops.senai.title")}
+                    </p>
+                    <p className="text-white/80 text-xs">
+                      {t("about.community.workshops.senai.description")}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="group relative overflow-hidden rounded-xl"
+              >
+                <img
+                  src="/images/meetup-3.jpg"
+                  alt="Workshop Mobile no Itaú"
+                  className="w-full h-[280px] object-cover rounded-xl transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex items-end p-4">
+                  <div>
+                    <p className="text-white font-bold text-sm mb-1">
+                      {t("about.community.workshops.itau.title")}
+                    </p>
+                    <p className="text-white/80 text-xs">
+                      {t("about.community.workshops.itau.description")}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="group relative overflow-hidden rounded-xl"
+              >
+                <img
+                  src="/images/meetup-4.jpeg"
+                  alt="Apresentação na FATEC Zona Sul"
+                  className="w-full h-[280px] object-cover rounded-xl transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex items-end p-4">
+                  <div>
+                    <p className="text-white font-bold text-sm mb-1">
+                      {t("about.community.workshops.fatec.title")}
+                    </p>
+                    <p className="text-white/80 text-xs">
+                      {t("about.community.workshops.fatec.description")}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+
+            <p className="text-white/70 text-sm italic mt-6 text-center">
+              {t("about.community.passion")}
+            </p>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -320,7 +466,7 @@ export const ExperienceSection = () => {
         <VerticalTimeline lineColor="rgba(168, 85, 247, 0.2)" animate={true}>
           {Array.isArray(t("experience.positions" as any)) &&
             (t("experience.positions" as any) as any[])
-              .slice(0, 5)
+              // .slice(0, 5)
               .map((position: any, index: number) => (
                 <VerticalTimelineElement
                   key={index}
