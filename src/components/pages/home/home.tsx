@@ -54,7 +54,6 @@ import VideoBackground from "@/components/VideoBackground";
 import { NestedOrbitSystem } from "@/components/nested-orbit-system/nested-orbit-system";
 import { SignalzAnimation } from "@/components/animate/circuit";
 import { TypewriterWelcome } from "@/components/typewelcome/typewriter-welcome";
-import { CircuitPulse } from "@/components/animate/circuit-pulse";
 
 // ==================== ENUMS ====================
 enum SocialPlatform {
@@ -1490,7 +1489,6 @@ export const ContactSection = () => {
           <p className="text-white/40 text-xs">{t("footer.copyright")}</p>
         </motion.div>
       </div>
-      <CircuitPulse />
     </section>
   );
 };
