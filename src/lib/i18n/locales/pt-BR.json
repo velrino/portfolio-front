@@ -10,6 +10,30 @@
     "contact": "Contato",
     "cv": "Currículo"
   },
+  "welcome": {
+    "phrases": [
+      "Arquiteto de software full-stack com +10 anos transformando desafios complexos em soluções escaláveis",
+      "CTO apaixonado por resolver problemas reais de negócio através da tecnologia",
+      "Especialista em construir sistemas que escalam e geram impacto mensurável",
+      "Líder técnico que conecta estratégia de negócio com excelência em engenharia",
+      "Desenvolvedor full-stack com expertise em Node.js, React, Python e Golang",
+      "Arquiteto de microsserviços e sistemas distribuídos de alta performance",
+      "Mentor de equipes técnicas focado em crescimento e entrega de valor",
+      "Especialista em integrações complexas: IA, pagamentos, comunicação e cloud",
+      "Transformo ideias em produtos escaláveis que resolvem problemas reais",
+      "CTO com experiência em startups de crescimento acelerado e scale-ups",
+      "Engenheiro de software obcecado por qualidade, performance e resultados",
+      "Especialista em arquitetura cloud-native com AWS, GCP e Kubernetes",
+      "Líder técnico que equilibra excelência técnica com pragmatismo de negócio",
+      "Desenvolvedor full-stack com expertise em TypeScript, Python e Go",
+      "Arquiteto de soluções que une tecnologia de ponta com viabilidade técnica",
+      "CTO focado em construir times de alta performance e cultura de engenharia",
+      "Especialista em modernização de sistemas legados e transformação digital",
+      "Engenheiro apaixonado por resolver problemas impossíveis com soluções simples",
+      "Líder técnico com visão estratégica e mão na massa quando necessário",
+      "Desenvolvedor que transforma complexidade em código limpo e manutenível"
+    ]
+  },
   "nav": {
     "about": "Sobre",
     "experience": "Experiência",

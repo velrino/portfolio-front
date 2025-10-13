@@ -10,6 +10,30 @@
     "contact": "Contact",
     "cv": "Resume"
   },
+  "welcome": {
+    "phrases": [
+      "Full-stack software architect with +10 years transforming complex challenges into scalable solutions",
+      "CTO passionate about solving real business problems through technology",
+      "Expert at building systems that scale and generate measurable impact",
+      "Technical leader connecting business strategy with engineering excellence",
+      "Full-stack developer with expertise in Node.js, React, Python, and Golang",
+      "Microservices architect and high-performance distributed systems specialist",
+      "Technical team mentor focused on growth and value delivery",
+      "Expert in complex integrations: AI, payments, communication, and cloud",
+      "Transforming ideas into scalable products that solve real problems",
+      "CTO with experience in high-growth startups and scale-ups",
+      "Software engineer obsessed with quality, performance, and results",
+      "Cloud-native architecture specialist with AWS, GCP, and Kubernetes",
+      "Technical leader balancing technical excellence with business pragmatism",
+      "Full-stack developer with expertise in TypeScript, Python, and Go",
+      "Solutions architect combining cutting-edge tech with technical feasibility",
+      "CTO focused on building high-performance teams and engineering culture",
+      "Expert in legacy system modernization and digital transformation",
+      "Engineer passionate about solving impossible problems with simple solutions",
+      "Technical leader with strategic vision and hands-on when needed",
+      "Developer transforming complexity into clean, maintainable code"
+    ]
+  },
   "nav": {
     "about": "About",
     "experience": "Experience",

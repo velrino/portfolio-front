@@ -53,6 +53,7 @@ import "react-vertical-timeline-component/style.min.css";
 import VideoBackground from "@/components/VideoBackground";
 import { NestedOrbitSystem } from "@/components/nested-orbit-system/nested-orbit-system";
 import { SignalzAnimation } from "@/components/animate/circuit";
+import { TypewriterWelcome } from "@/components/typewelcome/typewriter-welcome";
 
 // ==================== ENUMS ====================
 enum SocialPlatform {
@@ -99,12 +100,9 @@ export const HeroSection = () => {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
             {t("home.welcome")}
           </h1>
-          <p className="text-xl md:text-2xl lg:text-3xl text-white/90 mb-4 max-w-3xl mx-auto">
-            {t("home.subtitle")}
-          </p>
-          <p className="text-base md:text-lg text-white/80 mb-12 max-w-2xl mx-auto">
-            {t("home.description")}
-          </p>
+          <div className="text-base md:text-lg text-white/80 mb-12 max-w-2xl mx-auto">
+            <TypewriterWelcome />
+          </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-2xl mx-auto">
             <a
@@ -741,7 +739,12 @@ const getTechIcons = (stackString: string) => {
       }
       return null;
     })
-    .filter((item): item is { name: string; icon: React.ElementType; color: string } => item !== null);
+    .filter(
+      (
+        item
+      ): item is { name: string; icon: React.ElementType; color: string } =>
+        item !== null
+    );
 };
 
 export const ExperienceSection = () => {
@@ -808,17 +811,17 @@ export const ExperienceSection = () => {
               </h4>
               <ul className="space-y-2">
                 {Array.isArray(t("experience.current.highlights")) &&
-                  (t("experience.current.highlights") as unknown as string[]).map(
-                    (highlight: string, index: number) => (
-                      <li
-                        key={index}
-                        className="flex items-start gap-2 text-white/80"
-                      >
-                        <span className="text-purple-400 mt-1">▸</span>
-                        <span>{highlight}</span>
-                      </li>
-                    )
-                  )}
+                  (
+                    t("experience.current.highlights") as unknown as string[]
+                  ).map((highlight: string, index: number) => (
+                    <li
+                      key={index}
+                      className="flex items-start gap-2 text-white/80"
+                    >
+                      <span className="text-purple-400 mt-1">▸</span>
+                      <span>{highlight}</span>
+                    </li>
+                  ))}
               </ul>
             </div>
 
@@ -868,7 +871,11 @@ export const ExperienceSection = () => {
                     {[
                       { icon: SiReact, name: "React", color: "#61dafb" },
                       { icon: SiReact, name: "Next.js", color: "#000000" },
-                      { icon: SiTypescript, name: "TypeScript", color: "#3178c6" },
+                      {
+                        icon: SiTypescript,
+                        name: "TypeScript",
+                        color: "#3178c6",
+                      },
                       { icon: FaCode, name: "Tailwind", color: "#06b6d4" },
                     ].map((tech, idx) => {
                       const Icon = tech.icon;
@@ -896,9 +903,21 @@ export const ExperienceSection = () => {
                   <div className="flex flex-wrap gap-2">
                     {[
                       { icon: SiStripe, name: "Stripe", color: "#635bff" },
-                      { icon: FaCreditCard, name: "Apple Store", color: "#000" },
-                      { icon: FaCreditCard, name: "Cryptomus", color: "#f59e0b" },
-                      { icon: FaShieldAlt, name: "Security APIs", color: "#ef4444" },
+                      {
+                        icon: FaCreditCard,
+                        name: "Apple Store",
+                        color: "#000",
+                      },
+                      {
+                        icon: FaCreditCard,
+                        name: "Cryptomus",
+                        color: "#f59e0b",
+                      },
+                      {
+                        icon: FaShieldAlt,
+                        name: "Security APIs",
+                        color: "#ef4444",
+                      },
                     ].map((tech, idx) => {
                       const Icon = tech.icon;
                       return (
@@ -926,9 +945,17 @@ export const ExperienceSection = () => {
                     {[
                       { icon: SiAmazon, name: "AWS ECS", color: "#ff9900" },
                       { icon: SiAmazon, name: "AWS Cognito", color: "#ff9900" },
-                      { icon: FaChartLine, name: "New Relic", color: "#008c99" },
+                      {
+                        icon: FaChartLine,
+                        name: "New Relic",
+                        color: "#008c99",
+                      },
                       { icon: SiDocker, name: "Docker", color: "#2496ed" },
-                      { icon: FaCode, name: "GitHub Actions", color: "#2088ff" },
+                      {
+                        icon: FaCode,
+                        name: "GitHub Actions",
+                        color: "#2088ff",
+                      },
                     ].map((tech, idx) => {
                       const Icon = tech.icon;
                       return (
@@ -956,14 +983,16 @@ export const ExperienceSection = () => {
         {/* Timeline of Previous Positions */}
         <VerticalTimeline lineColor="rgba(168, 85, 247, 0.2)" animate={true}>
           {Array.isArray(t("experience.positions")) &&
-            (t("experience.positions") as unknown as Array<{
-              title: string;
-              company: string;
-              period: string;
-              location: string;
-              description: string;
-              achievements: string[];
-            }>)
+            (
+              t("experience.positions") as unknown as Array<{
+                title: string;
+                company: string;
+                period: string;
+                location: string;
+                description: string;
+                achievements: string[];
+              }>
+            )
               // .slice(0, 5)
               .map((position, index: number) => (
                 <VerticalTimelineElement
@@ -1274,11 +1303,11 @@ export const TalksSection = () => {
                 "Tópicos Abordados:"}
             </h4>
             <div className="grid md:grid-cols-2 gap-3">
-              {Array.isArray(
-                t("talks.featured.chatgpt_whatsapp.topics")
-              ) &&
+              {Array.isArray(t("talks.featured.chatgpt_whatsapp.topics")) &&
                 (
-                  t("talks.featured.chatgpt_whatsapp.topics") as unknown as string[]
+                  t(
+                    "talks.featured.chatgpt_whatsapp.topics"
+                  ) as unknown as string[]
                 ).map((topic: string, index: number) => (
                   <div
                     key={index}
@@ -1404,9 +1433,7 @@ export const ContactSection = () => {
             return (
               <a
                 key={social.platform}
-                href={`https://${t(
-                  `contact.social.${social.platform}`
-                )}`}
+                href={`https://${t(`contact.social.${social.platform}`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`group p-4 rounded-xl hover:border-purple-500/50 transition-all duration-300 ${social.color}`}
