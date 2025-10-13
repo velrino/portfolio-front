@@ -166,3 +166,81 @@
   font-family: "Arial", sans-serif;
   font-weight: 900;
 }
+
+/* Vertical Timeline Mobile-First Styles */
+.vertical-timeline {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+.vertical-timeline-element {
+  margin: 2rem 0 !important;
+}
+
+.vertical-timeline-element-content {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 16px !important;
+  color: white !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+}
+
+.vertical-timeline-element-icon {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border: 2px solid rgba(255, 255, 255, 0.4) !important;
+  color: white !important;
+}
+
+.vertical-timeline::before {
+  background: rgba(255, 255, 255, 0.3) !important;
+  width: 2px !important;
+}
+
+/* Force visibility */
+.vertical-timeline,
+.vertical-timeline-element,
+.vertical-timeline-element-content,
+.vertical-timeline-element-icon {
+  visibility: visible !important;
+  opacity: 1 !important;
+  display: block !important;
+}
+
+/* Mobile specific - Fix overflow issues */
+@media screen and (max-width: 767px) {
+  .vertical-timeline {
+    overflow: hidden !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .vertical-timeline.vertical-timeline--one-column-left
+    .vertical-timeline-element-content {
+    margin-left: 60px !important;
+    margin-right: 10px !important;
+    width: calc(100% - 70px) !important;
+    max-width: calc(100% - 70px) !important;
+    box-sizing: border-box !important;
+  }
+
+  .vertical-timeline.vertical-timeline--one-column-left
+    .vertical-timeline-element-icon {
+    left: 15px !important;
+  }
+
+  .vertical-timeline::before {
+    left: 30px !important;
+  }
+
+  /* Prevent horizontal overflow */
+  .vertical-timeline-element {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  .vertical-timeline-element-content .vertical-timeline-element-date {
+    display: none !important;
+  }
+}

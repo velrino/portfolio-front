@@ -155,8 +155,8 @@ export const AboutSection = () => {
   ];
 
   return (
-    <section id="features" className={`py-20 relative`}>
-      <div className="container mx-auto px-4 md:px-20 relative z-10">
+    <section id="features" className={`py-40 relative overflow-hidden`}>
+      <div className="container mx-auto px-4 md:px-20 relative z-10 overflow-hidden">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white mt-2">
             Nossa Tecnologia em <span className="outlined-text">Ação</span>
@@ -167,7 +167,7 @@ export const AboutSection = () => {
         </div>
 
         <div className="max-w-4xl mx-auto overflow-hidden">
-          <div className="w-full overflow-x-hidden">
+          <div className="w-full overflow-hidden">
             <VerticalTimeline
               lineColor="rgba(255, 255, 255, 0.3)"
               animate={true}
@@ -294,7 +294,7 @@ export const AboutSection = () => {
 export const SkillsSection = () => {
   return (
     <div className="min-h-screen">
-      <div className="text-center">
+      <div className="text-center py-20">
         <h2 className="text-3xl md:text-4xl font-bold text-white">
           Minhas <span className="outlined-text">Habilidades</span>
         </h2>
