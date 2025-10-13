@@ -1,7 +1,6 @@
 "use client";
 
 import { useTranslation } from "@/lib/i18n/useTranslation";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import {
   FaTrophy,
@@ -91,12 +90,7 @@ export const HeroSection = () => {
       <VideoBackground />
 
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 md:px-8 text-center w-full">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-5xl"
-        >
+        <div className="max-w-5xl">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
             {t("home.welcome")}
           </h1>
@@ -113,7 +107,7 @@ export const HeroSection = () => {
               <FaChevronRight className="group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );
@@ -126,13 +120,7 @@ export const AboutSection = () => {
   return (
     <section id="about" className="min-h-screen py-20 px-4 md:px-8">
       <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             {t("about.title")}
           </h2>
@@ -142,25 +130,13 @@ export const AboutSection = () => {
           <p className="text-lg text-white/80 max-w-3xl mx-auto">
             {t("about.subtitle")}
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="space-y-8"
-        >
+        <div className="space-y-8">
           {/* Intro & Journey with Photo */}
           <div className="bg-black/20 backdrop-blur-lg border border-white/10 rounded-2xl p-8">
             {/* Photo Float Right */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="float-right ml-6 mb-6 w-full md:w-[350px]"
-            >
+            <div className="float-right ml-6 mb-6 w-full md:w-[350px]">
               <div className="relative group overflow-hidden rounded-xl">
                 <Image
                   src="/images/me.jpeg"
@@ -175,7 +151,7 @@ export const AboutSection = () => {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             <p className="text-lg text-white/90 leading-relaxed mb-6">
               {t("about.intro")}
@@ -206,13 +182,7 @@ export const AboutSection = () => {
 
             <div className="space-y-6">
               {/* AI & Machine Learning */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="group"
-              >
+              <div className="group">
                 <div className="flex items-center gap-3 mb-3">
                   <FaBrain className="text-3xl text-purple-400 group-hover:scale-110 transition-transform" />
                   <h4 className="text-lg font-bold text-white">
@@ -246,16 +216,10 @@ export const AboutSection = () => {
                     );
                   })}
                 </div>
-              </motion.div>
+              </div>
 
               {/* Payments */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="group"
-              >
+              <div className="group">
                 <div className="flex items-center gap-3 mb-3">
                   <FaCreditCard className="text-3xl text-green-400 group-hover:scale-110 transition-transform" />
                   <h4 className="text-lg font-bold text-white">
@@ -289,16 +253,10 @@ export const AboutSection = () => {
                     );
                   })}
                 </div>
-              </motion.div>
+              </div>
 
               {/* Communication */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="group"
-              >
+              <div className="group">
                 <div className="flex items-center gap-3 mb-3">
                   <FaComments className="text-3xl text-blue-400 group-hover:scale-110 transition-transform" />
                   <h4 className="text-lg font-bold text-white">
@@ -340,16 +298,10 @@ export const AboutSection = () => {
                     );
                   })}
                 </div>
-              </motion.div>
+              </div>
 
               {/* Infrastructure */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="group"
-              >
+              <div className="group">
                 <div className="flex items-center gap-3 mb-3">
                   <FaServer className="text-3xl text-orange-400 group-hover:scale-110 transition-transform" />
                   <h4 className="text-lg font-bold text-white">
@@ -392,16 +344,10 @@ export const AboutSection = () => {
                     );
                   })}
                 </div>
-              </motion.div>
+              </div>
 
               {/* Cloud */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="group"
-              >
+              <div className="group">
                 <div className="flex items-center gap-3 mb-3">
                   <FaCloud className="text-3xl text-cyan-400 group-hover:scale-110 transition-transform" />
                   <h4 className="text-lg font-bold text-white">
@@ -436,16 +382,10 @@ export const AboutSection = () => {
                     );
                   })}
                 </div>
-              </motion.div>
+              </div>
 
               {/* Monitoring */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                viewport={{ once: true }}
-                className="group"
-              >
+              <div className="group">
                 <div className="flex items-center gap-3 mb-3">
                   <FaChartLine className="text-3xl text-pink-400 group-hover:scale-110 transition-transform" />
                   <h4 className="text-lg font-bold text-white">
@@ -482,16 +422,10 @@ export const AboutSection = () => {
                     );
                   })}
                 </div>
-              </motion.div>
+              </div>
 
               {/* Security */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.6 }}
-                viewport={{ once: true }}
-                className="group"
-              >
+              <div className="group">
                 <div className="flex items-center gap-3 mb-3">
                   <FaShieldAlt className="text-3xl text-red-400 group-hover:scale-110 transition-transform" />
                   <h4 className="text-lg font-bold text-white">
@@ -528,18 +462,12 @@ export const AboutSection = () => {
                     );
                   })}
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
 
           {/* Community & Workshops Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="bg-black/20 backdrop-blur-lg border border-white/10 rounded-2xl p-8"
-          >
+          <div className="bg-black/20 backdrop-blur-lg border border-white/10 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
               <FaUsers className="text-purple-400" />
               {t("about.community.title")}
@@ -549,13 +477,7 @@ export const AboutSection = () => {
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="group relative overflow-hidden rounded-xl"
-              >
+              <div className="group relative overflow-hidden rounded-xl">
                 <Image
                   src="/images/meetup-1.jpg"
                   alt="Workshop na Beetech"
@@ -573,15 +495,9 @@ export const AboutSection = () => {
                     </p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="group relative overflow-hidden rounded-xl"
-              >
+              <div className="group relative overflow-hidden rounded-xl">
                 <Image
                   src="/images/meetup-2.jpg"
                   alt="Workshop no SENAI"
@@ -599,15 +515,9 @@ export const AboutSection = () => {
                     </p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="group relative overflow-hidden rounded-xl"
-              >
+              <div className="group relative overflow-hidden rounded-xl">
                 <Image
                   src="/images/meetup-3.jpg"
                   alt="Workshop Mobile no Itaú"
@@ -625,15 +535,9 @@ export const AboutSection = () => {
                     </p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="group relative overflow-hidden rounded-xl"
-              >
+              <div className="group relative overflow-hidden rounded-xl">
                 <Image
                   src="/images/meetup-4.jpeg"
                   alt="Apresentação na FATEC Zona Sul"
@@ -651,21 +555,15 @@ export const AboutSection = () => {
                     </p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
 
             <p className="text-white/70 text-sm italic mt-6 text-center">
               {t("about.community.passion")}
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-r from-purple-900/20 to-pink-900/20 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-8"
-          >
+          <div className="bg-gradient-to-r from-purple-900/20 to-pink-900/20 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-8">
             <p className="text-lg text-white/90 leading-relaxed mb-4">
               {t("about.pride")}
             </p>
@@ -675,8 +573,8 @@ export const AboutSection = () => {
             <p className="text-lg text-white/90 font-medium">
               {t("about.cta")}
             </p>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -745,29 +643,17 @@ export const ExperienceSection = () => {
       <SignalzAnimation />
 
       <div className="max-w-6xl mx-auto relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             {t("experience.title")}
           </h2>
           <p className="text-xl text-white/80 max-w-2xl mx-auto">
             {t("experience.subtitle")}
           </p>
-        </motion.div>
+        </div>
 
         {/* Current Position - Highlighted */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="mb-12"
-        >
+        <div className="mb-12">
           <div className="bg-black/20 backdrop-blur-lg border border-purple-500/30 rounded-2xl p-8">
             <div className="flex items-start justify-between flex-wrap gap-4 mb-6">
               <div>
@@ -965,7 +851,7 @@ export const ExperienceSection = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Timeline of Previous Positions */}
         <VerticalTimeline lineColor="rgba(168, 85, 247, 0.2)" animate={true}>
@@ -1107,13 +993,7 @@ export const AwardsSection = () => {
   return (
     <section id="awards" className="min-h-screen py-20 px-4 md:px-8">
       <div className="max-w-6xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 flex items-center justify-center gap-3">
             <FaTrophy className="text-purple-400" />
             {t("awards.title")}
@@ -1121,19 +1001,15 @@ export const AwardsSection = () => {
           <p className="text-xl text-white/80 max-w-2xl mx-auto">
             {t("awards.subtitle")}
           </p>
-        </motion.div>
+        </div>
 
         {/* Featured Awards */}
         <div className="grid md:grid-cols-2 gap-8 mb-12 max-w-4xl mx-auto">
           {awards.map((award, index) => {
             const Icon = award.icon;
             return (
-              <motion.div
+              <div
                 key={award.type}
-                initial={{ opacity: 0, x: index === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
                 className="flex flex-col h-full transition-all duration-300"
               >
                 <Image
@@ -1167,19 +1043,13 @@ export const AwardsSection = () => {
                     </p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             );
           })}
         </div>
 
         {/* Adapta Mídia Project Showcase */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] min-h-screen flex items-center justify-center overflow-hidden"
-        >
+        <div className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] min-h-screen flex items-center justify-center overflow-hidden">
           {/* Video Background */}
           <video
             autoPlay
@@ -1257,7 +1127,7 @@ export const AwardsSection = () => {
               </p>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
@@ -1270,13 +1140,7 @@ export const TalksSection = () => {
   return (
     <section id="talks" className="py-20">
       <div className="mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 flex items-center justify-center gap-3">
             <FaMicrophone className="text-purple-400" />
             {t("talks.title")}
@@ -1284,17 +1148,11 @@ export const TalksSection = () => {
           <p className="text-xl text-white/80 max-w-2xl mx-auto">
             {t("talks.subtitle")}
           </p>
-        </motion.div>
+        </div>
 
         <div className="px-5">
           {/* Featured Talk: ChatGPT + WhatsApp */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="relative rounded-2xl min-h-screen flex items-center justify-center overflow-hidden mb-12"
-          >
+          <div className="relative rounded-2xl min-h-screen flex items-center justify-center overflow-hidden mb-12">
             {/* Background Image */}
             <div
               className="absolute inset-0 bg-cover bg-center"
@@ -1367,7 +1225,7 @@ export const TalksSection = () => {
                 </a>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
@@ -1381,19 +1239,14 @@ export const SkillsSection = () => {
   return (
     <section id="skills" className="min-h-screen py-20">
       <div className="text-center mb-16 px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
+        <div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             {t("skills.title")}
           </h2>
           <p className="text-xl text-white/80 max-w-2xl mx-auto">
             {t("skills.subtitle")}
           </p>
-        </motion.div>
+        </div>
       </div>
 
       <NestedOrbitSystem />
@@ -1433,13 +1286,7 @@ export const ContactSection = () => {
       className="min-h-screen flex items-center justify-center py-20 px-4 relative"
     >
       <div className="max-w-4xl mx-auto w-full relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
+        <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             {t("contact.title")}
           </h2>
@@ -1447,16 +1294,10 @@ export const ContactSection = () => {
           <p className="text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
             {t("contact.description")}
           </p>
-        </motion.div>
+        </div>
 
         {/* Social Links */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="flex gap-6 justify-center mb-12"
-        >
+        <div className="flex gap-6 justify-center mb-12">
           {socialLinks.map((social) => {
             const Icon = social.icon;
             return (
@@ -1475,19 +1316,13 @@ export const ContactSection = () => {
               </a>
             );
           })}
-        </motion.div>
+        </div>
 
         {/* Footer */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          viewport={{ once: true }}
-          className="mt-16 pt-8 border-t border-white/10 text-center"
-        >
+        <div className="mt-16 pt-8 border-t border-white/10 text-center">
           <p className="text-white/60 text-sm mb-2">{t("footer.tagline")}</p>
           <p className="text-white/40 text-xs">{t("footer.copyright")}</p>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
