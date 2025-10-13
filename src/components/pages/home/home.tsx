@@ -3,12 +3,14 @@
 import { useTranslation } from "@/lib/i18n/useTranslation";
 import Link from "next/link";
 import VideoBackground from "@/components/VideoBackground";
+import { NestedOrbitSystem } from "@/components/nested-orbit-system/nested-orbit-system";
 
 export default function HomeComponent() {
   return (
     <>
       <HeroSection />
       <AboutSection />
+      <SkillsSection />
     </>
   );
 }
@@ -54,4 +56,13 @@ export const HeroSection = () => {
 
 export const AboutSection = () => {
   return <div className="min-h-screen">About</div>;
+};
+
+export const SkillsSection = () => {
+  return (
+    <div className="min-h-screen">
+      <div>Skills</div>
+      <NestedOrbitSystem />
+    </div>
+  );
 };
