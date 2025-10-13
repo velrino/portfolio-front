@@ -1,0 +1,15 @@
+{
+  "home": {
+    "title": "Início",
+    "welcome": "Olá, sou Denis Magalhães",
+    "subtitle": "Também conhecido como velrino"
+  },
+  "cv": {
+    "title": "Currículo",
+    "pageTitle": "Meu Currículo"
+  },
+  "navigation": {
+    "home": "Início",
+    "cv": "Currículo"
+  }
+}

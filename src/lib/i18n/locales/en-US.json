@@ -1,0 +1,15 @@
+{
+  "home": {
+    "title": "Home",
+    "welcome": "Hi, I'm Denis Magalhães",
+    "subtitle": "Also known as velrino"
+  },
+  "cv": {
+    "title": "Resume",
+    "pageTitle": "My Resume"
+  },
+  "navigation": {
+    "home": "Home",
+    "cv": "Resume"
+  }
+}
