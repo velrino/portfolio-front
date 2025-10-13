@@ -54,6 +54,7 @@ import VideoBackground from "@/components/VideoBackground";
 import { NestedOrbitSystem } from "@/components/nested-orbit-system/nested-orbit-system";
 import { SignalzAnimation } from "@/components/animate/circuit";
 import { TypewriterWelcome } from "@/components/typewelcome/typewriter-welcome";
+import { CircuitPulse } from "@/components/animate/circuit-pulse";
 
 // ==================== ENUMS ====================
 enum SocialPlatform {
@@ -1426,9 +1427,9 @@ export const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="min-h-screen flex items-center justify-center py-20 px-4"
+      className="min-h-screen flex items-center justify-center py-20 px-4 relative"
     >
-      <div className="max-w-4xl mx-auto w-full">
+      <div className="max-w-4xl mx-auto w-full relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -1485,6 +1486,7 @@ export const ContactSection = () => {
           <p className="text-white/40 text-xs">{t("footer.copyright")}</p>
         </motion.div>
       </div>
+      <CircuitPulse />
     </section>
   );
 };
