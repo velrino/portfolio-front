@@ -40,6 +40,12 @@ export const HeroSection = () => {
           >
             {t("navigation.cv")}
           </Link>
+          <Link
+            href="/cv"
+            className="px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-lg hover:opacity-90 transition-opacity text-center shadow-lg"
+          >
+            {t("navigation.cv")}
+          </Link>
         </nav>
       </div>
     </div>
