@@ -15,6 +15,7 @@ import { useLocale } from "@/lib/i18n/LocaleContext";
 import { useTranslation } from "@/lib/i18n/useTranslation";
 import { Locale } from "@/types/locale";
 import Link from "next/link";
+import Image from "next/image";
 
 export function Navigation() {
   const { locale, setLocale } = useLocale();
@@ -43,14 +44,23 @@ export function Navigation() {
 
   const navItems = [
     { href: isHomePage ? "#about" : "/#about", label: t("nav.about") },
-    { href: isHomePage ? "#experience" : "/#experience", label: t("nav.experience") },
-    { href: isHomePage ? "#awards" : "/#awards", label: t("navigation.awards") },
+    {
+      href: isHomePage ? "#experience" : "/#experience",
+      label: t("nav.experience"),
+    },
+    {
+      href: isHomePage ? "#awards" : "/#awards",
+      label: t("navigation.awards"),
+    },
     { href: isHomePage ? "#talks" : "/#talks", label: t("nav.talks") },
     { href: isHomePage ? "#skills" : "/#skills", label: t("nav.skills") },
     { href: isHomePage ? "#contact" : "/#contact", label: t("nav.contact") },
   ];
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
     if (isHomePage && href.startsWith("#")) {
       e.preventDefault();
       const element = document.querySelector(href);
@@ -73,7 +83,13 @@ export function Navigation() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <span className="text-xl font-bold text-primary">velrino</span>
+            <Image
+              src="/logo-white.png"
+              alt="Logo"
+              width={40}
+              height={40}
+              className={`w-full h-full object-contain p-0`}
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -113,11 +129,23 @@ export function Navigation() {
                   <Menu className="h-5 w-5" />
                 </button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-full h-full p-0">
+              <SheetContent
+                side="right"
+                className="w-full h-full p-0"
+                hideClose
+              >
                 <div className="flex flex-col h-full bg-gradient-to-br from-primary/10 to-secondary/10">
                   <SheetHeader className="p-6 border-b">
                     <div className="flex items-center justify-between">
-                      <SheetTitle className="text-2xl font-bold">Menu</SheetTitle>
+                      <SheetTitle className="text-2xl font-bold">
+                        <Image
+                          src="/logo-white.png"
+                          alt="Logo"
+                          width={40}
+                          height={40}
+                          className={`w-full h-full object-contain p-0`}
+                        />
+                      </SheetTitle>
                       <SheetClose asChild>
                         <button
                           className="p-2 hover:bg-accent rounded-md transition"
