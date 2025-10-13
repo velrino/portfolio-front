@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { LocaleProvider } from "@/lib/i18n/LocaleContext";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,23 +27,33 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <LocaleProvider>
-          <div className="min-h-screen flex flex-col">
-            <header className="p-4 border-b">
-              <div className="max-w-6xl mx-auto flex justify-between items-center">
-                <h1 className="text-xl font-bold">velrino</h1>
-                <LanguageSwitcher />
-              </div>
-            </header>
-            <main className="flex-1">
-              {children}
-            </main>
-          </div>
-        </LocaleProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <LocaleProvider>
+            <div className="min-h-screen flex flex-col">
+              <header className="border-b">
+                <div className="max-w-6xl mx-auto flex justify-between items-center p-4">
+                  <h1 className="text-xl font-bold">velrino</h1>
+                  <div className="flex gap-2">
+                    <LanguageSwitcher />
+                    <ThemeToggle />
+                  </div>
+                </div>
+              </header>
+              <main className="flex-1">
+                {children}
+              </main>
+            </div>
+          </LocaleProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
