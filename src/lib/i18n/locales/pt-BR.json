@@ -1,56 +1,483 @@
 {
-  "home": {
-    "title": "Início",
-    "welcome": "Olá, sou Denis Magalhães",
-    "subtitle": "Também conhecido como velrino",
-    "description": "Engenheiro Frontend, Backend e AI/ML com mais de 10 anos de experiência"
-  },
-  "nav": {
+  "navigation": {
+    "home": "Início",
     "about": "Sobre",
     "experience": "Experiência",
+    "awards": "Prêmios",
     "projects": "Projetos",
     "skills": "Habilidades",
     "talks": "Palestras",
     "contact": "Contato",
-    "toggle": "Alternar idioma"
+    "cv": "Currículo"
+  },
+  "home": {
+    "title": "Início",
+    "welcome": "Transformando Ideias em Soluções Tecnológicas de Alto Impacto",
+    "subtitle": "CTO & Tech Lead especializado em arquitetar plataformas escaláveis que geram resultados extraordinários",
+    "description": "Com mais de 10 anos liderando projetos de alta complexidade, construo sistemas que conectam tecnologia de ponta com visão de negócios",
+    "cta": {
+      "primary": "Ver Projetos",
+      "secondary": "Baixar CV",
+      "contact": "Vamos Conversar"
+    }
   },
   "about": {
     "title": "Sobre Mim",
-    "description": "Desenvolvedor full-stack apaixonado por tecnologia desde 2014"
+    "headline": "Engenheiro de Software com DNA Empreendedor",
+    "subtitle": "Especialista em transformar desafios técnicos complexos em oportunidades de crescimento exponencial",
+    "intro": "Full Stack Developer com perfil empreendedor, resiliente e focado em superar desafios técnicos. Proativo, adaptável e comprometido com o aprendizado contínuo.",
+    "journey": {
+      "title": "Minha Jornada",
+      "p1": "Ao longo da minha carreira, arquitetei, escalei e engenhei projetos do zero, além de gerenciar equipes de desenvolvimento e procedimentos ágeis Scrum.",
+      "p2": "Trabalhei com PHP e Java no início da carreira. Há mais de 5 anos, migrei para JavaScript/TypeScript, utilizando frameworks como React, Angular, React Native, Node.js Express, Nest.js, entre outros.",
+      "p3": "Também programei com Flutter, Python e Golang em diversos momentos quando as equipes decidiram utilizar essas linguagens e frameworks."
+    },
+    "integrations": {
+      "title": "Integrações & Tecnologias",
+      "description": "Integrei aplicações com diversos serviços e APIs que foram fundamentais para o sucesso em eficiência, usabilidade e experiência:",
+      "categories": {
+        "ai": "IA & Machine Learning: OpenAI APIs, ChatGPT, Dall-E, Whisper, Leonardo AI, Fine Tuning, LLM",
+        "payments": "Pagamentos Digitais: Stripe, Cryptomus, NoxPay, Apple Store API",
+        "communication": "Comunicação: Twilio (SMS e WhatsApp), SES, SendGrid, SendinBlue",
+        "infrastructure": "Infraestrutura: Redis (Pub/Sub), RabbitMQ, SQS, SNS, ElasticSearch",
+        "cloud": "Cloud & Storage: AWS, GCP, Heroku, Cloudinary, S3, Firebase",
+        "monitoring": "Monitoramento: New Relic, DataDog, Grafana",
+        "security": "Segurança: HaveIBeenPwned, Leakcheck, Dehashed APIs"
+      }
+    },
+    "pride": "Tenho muito orgulho de que vários projetos que ajudei a criar do zero cresceram e venderam tão rápido, fazendo essas startups conquistarem grandes clientes ao redor do mundo.",
+    "philosophy": "Acredito que tenho muito mais a realizar porque sempre fui focado, determinado, de mente aberta e apaixonadamente elétrico.",
+    "cta": "Você pode contar comigo. Vamos manter contato e mudar o mundo para melhor!"
   },
   "experience": {
     "title": "Experiência Profissional",
-    "years": "anos de experiência"
+    "subtitle": "Construindo soluções que escalam e geram impacto real",
+    "years": "anos de experiência",
+    "current": {
+      "title": "CTO & Tech Lead",
+      "company": "Fintech & iGaming (NDA)",
+      "period": "Jun 2024 - Presente",
+      "location": "Remote",
+      "description": "Liderando a concepção técnica completa, desenvolvimento e entrega de plataformas de alta performance em Fintech e iGaming.",
+      "highlights": [
+        "Arquitetura completa de plataformas escaláveis do zero",
+        "Gestão de equipes técnicas multidisciplinares (DevOps, Frontend Web, Mobile)",
+        "Implementação de soluções de pagamentos recorrentes e criptomoedas",
+        "Integração com APIs de terceiros para segurança e compliance",
+        "Automação de CI/CD e infraestrutura cloud"
+      ],
+      "stack": {
+        "backend": "NestJS, Node-ssh, Pusher, JWT, MongoDB Atlas, Redis",
+        "frontend": "React, Next.js, Tailwind, TailAdmin",
+        "integrations": "Stripe, Apple Store, Cryptomus, NoxPay, HaveIBeenPwned, Slack, Google Tag Manager",
+        "infrastructure": "New Relic, AWS ECS, AWS Cognito, AWS SES, Github Actions, Docker"
+      }
+    },
+    "positions": [
+      {
+        "title": "Tech Lead & Senior Software Engineer",
+        "company": "GO-K Digital (Grafeno Digital)",
+        "period": "Mar 2023 - Jun 2024",
+        "location": "Remote",
+        "description": "Tech Lead liderando o projeto de Emissão de Crédito e impulsionando excelência técnica em desenvolvimento full-stack.",
+        "achievements": [
+          "Arquitetei e desenvolvi APIs escaláveis usando NestJS com documentação Swagger completa",
+          "Projetei soluções de dados robustas com PostgreSQL e camadas de cache Redis",
+          "Implementei deployments containerizados usando Docker e orquestração Kubernetes",
+          "Construí aplicações front-end responsivas com React e TypeScript",
+          "Automatizei pipelines CI/CD através do GitHub Actions",
+          "Monitorei sistemas de produção com Grafana (DEV/STG) e New Relic (PROD)",
+          "Liderei Planos de Desenvolvimento Individual (IDPs) para acelerar crescimento profissional da equipe"
+        ]
+      },
+      {
+        "title": "Tech Lead - Squad de Autenticação e Permissões",
+        "company": "Itaú BBA",
+        "period": "Jul 2022 - Fev 2023",
+        "location": "São Paulo",
+        "description": "Responsável pela squad de Autenticação e Permissões de Usuários no novo Bankline para Clientes Corporativos.",
+        "achievements": [
+          "Arquitetura Hexagonal em Spring Boot 2.6.8 com Java",
+          "TDD com 90% de cobertura (backend e frontend)",
+          "Auth0 & CIAM para autenticação corporativa",
+          "React com Acessibilidade e framework interno Voxel",
+          "DevOps com AWS EKS, S3, Gateway, CodePipeline, STS",
+          "Charon para criptografia de requisições front-end para back-end"
+        ]
+      },
+      {
+        "title": "FIC Engineer",
+        "company": "Trustly",
+        "period": "Set 2021 - Jul 2022",
+        "location": "Remote",
+        "description": "Responsável por integrar o gateway da Trustly com bancos americanos usando Web Scraping e Rest API.",
+        "achievements": [
+          "Integração com bancos norte-americanos via Web Scraping",
+          "Rotação de IPs usando AWS, Google Cloud e Azure",
+          "Stack: Java, PostgreSQL, Docker, IntelliJ",
+          "Metodologia Scrum usando Jira"
+        ]
+      },
+      {
+        "title": "Software Engineer - Mobile",
+        "company": "Itaú Unibanco",
+        "period": "Jun 2019 - Mai 2021",
+        "location": "São Paulo",
+        "description": "Desenvolvimento de WebViews usando Angular presentes nas aplicações Android e iOS.",
+        "achievements": [
+          "Angular para WebViews mobile",
+          "Deploy AWS S3 com CodePipeline",
+          "Backend Java com Docker e Jenkins"
+        ]
+      },
+      {
+        "title": "Technology Consultant Senior",
+        "company": "Sthorm",
+        "period": "Mar 2020 - Mar 2021",
+        "location": "Remote",
+        "description": "Prestação de serviços full-stack para construção do ViralCure (https://viralcure.org/)",
+        "achievements": [
+          "Frontend Angular",
+          "Backend Nest.JS com PostgreSQL",
+          "Docker e Git",
+          "Scrum usando Trello"
+        ]
+      },
+      {
+        "title": "Software Engineer",
+        "company": "Accenture",
+        "period": "Abr 2018 - Jun 2019",
+        "location": "São Paulo",
+        "description": "Trabalho no projeto Porto Seguro com Angular e Java"
+      },
+      {
+        "title": "Software Engineer",
+        "company": "QueroQuitar",
+        "period": "Abr 2016 - Jan 2017",
+        "location": "São Paulo",
+        "description": "Implantação de integração via WebService REST e SOAP para diversos provedores",
+        "achievements": [
+          "Frontend Angular",
+          "Backend Laravel e Lumen",
+          "MongoDB e MySQL",
+          "TDD e Docker"
+        ]
+      },
+      {
+        "title": "Software Engineer Intern",
+        "company": "Ingresse",
+        "period": "Dez 2014 - Fev 2015",
+        "location": "São Paulo",
+        "description": "Backend PHP com Symfony, Nginx e API Rest"
+      },
+      {
+        "title": "Intern",
+        "company": "Porto Seguro",
+        "period": "Nov 2013 - Out 2014",
+        "location": "São Paulo"
+      }
+    ]
   },
-  "projects": {
-    "title": "Projetos",
-    "viewAll": "Ver todos",
-    "viewLive": "Ver ao vivo",
-    "viewCode": "Ver código"
-  },
-  "skills": {
-    "title": "Habilidades",
-    "frontend": "Frontend",
-    "backend": "Backend",
-    "aiml": "AI/ML",
-    "tools": "Ferramentas"
+  "awards": {
+    "title": "Prêmios & Reconhecimentos",
+    "subtitle": "Inovação reconhecida e premiada nacionalmente",
+    "featured": {
+      "summit": {
+        "title": "Adapta Summit 2023",
+        "award": "1º Lugar - R$ 100.000",
+        "project": "Adapta Mídia",
+        "description": "Vencedor do maior prêmio do evento com solução inovadora de mídia Out-of-Home impulsionada por Inteligência Artificial e Visão Computacional",
+        "impact": "Solução revolucionária que transforma a publicidade urbana através de tecnologia de ponta"
+      },
+      "hackathon": {
+        "title": "Adapta Hackathon 2022",
+        "award": "Premiado - R$ 40.000",
+        "project": "Adapta Mídia",
+        "description": "Premiado por desenvolver plataforma pioneira de análise e otimização de mídia exterior usando IA",
+        "impact": "Prototipação rápida e validação de conceito inovador em 48 horas"
+      }
+    },
+    "project": {
+      "title": "Adapta Mídia",
+      "tagline": "Revolucionando a Publicidade Out-of-Home com Inteligência Artificial",
+      "description": "Plataforma inovadora que utiliza Visão Computacional e IA para analisar, otimizar e maximizar o impacto de campanhas de mídia exterior em tempo real.",
+      "website": "adaptamidia.com",
+      "features": [
+        "Análise em tempo real de tráfego e audiência",
+        "Otimização inteligente de campanhas publicitárias",
+        "Insights acionáveis baseados em dados",
+        "Dashboard analytics avançado"
+      ],
+      "demo": {
+        "title": "Veja a Demonstração",
+        "video": "Assista ao vídeo de demonstração da plataforma em ação",
+        "cta": "Ver Demo"
+      },
+      "award_photo": {
+        "alt": "Denis Magalhães recebendo prêmio no Adapta Summit",
+        "caption": "Momento da premiação no Adapta Summit 2023"
+      }
+    },
+    "stats": {
+      "total_prize": "R$ 140.000",
+      "competitions": "2 Competições",
+      "recognition": "Reconhecimento Nacional"
+    }
   },
   "talks": {
     "title": "Palestras & Apresentações",
-    "watchVideo": "Assistir",
-    "viewSlides": "Ver slides"
+    "subtitle": "Compartilhando conhecimento e experiências com a comunidade tech",
+    "featured": {
+      "chatgpt_whatsapp": {
+        "title": "ChatGPT integrado ao WhatsApp",
+        "description": "Apresentação técnica sobre integração do ChatGPT com WhatsApp usando API oficial do Facebook e Nest.js",
+        "topics": [
+          "Arquitetura de integração ChatGPT + WhatsApp",
+          "Utilização da API oficial do Facebook",
+          "Implementação backend com Nest.js",
+          "Casos de uso e aplicações práticas",
+          "Desafios e soluções encontradas"
+        ],
+        "slides_url": "https://docs.google.com/presentation/d/1-sCUPW5UFyvayFxeVKM-PTmw1w1IS3ap/",
+        "tech_stack": "Node.js, Nest.js, OpenAI API, WhatsApp Business API, TypeScript",
+        "cta": {
+          "slides": "Ver Apresentação",
+          "video": "Assistir Palestra"
+        }
+      }
+    },
+    "topics": {
+      "title": "Tópicos de Interesse",
+      "list": [
+        "Inteligência Artificial aplicada",
+        "Arquitetura de Software escalável",
+        "Integração de APIs de terceiros",
+        "Liderança técnica e gestão de times",
+        "DevOps e CI/CD",
+        "Performance e otimização"
+      ]
+    },
+    "availability": {
+      "title": "Disponível para Palestras",
+      "description": "Interessado em compartilhar experiências sobre desenvolvimento, arquitetura de software, IA e liderança técnica",
+      "cta": "Entre em Contato"
+    }
+  },
+  "skills": {
+    "title": "Habilidades & Tecnologias",
+    "subtitle": "Stack tecnológico diversificado e em constante evolução",
+    "categories": {
+      "ai_ml": {
+        "title": "IA & Machine Learning",
+        "items": [
+          "Model Context Protocol (MCP)",
+          "Large Language Models (LLM)",
+          "Fine Tuning",
+          "OpenAI APIs (ChatGPT, Dall-E, Whisper)",
+          "Leonardo AI",
+          "Computer Vision",
+          "OCR & Image Detection"
+        ]
+      },
+      "backend": {
+        "title": "Backend & APIs",
+        "items": [
+          "Node.js / TypeScript",
+          "Nest.js",
+          "Express",
+          "Java / Spring Boot",
+          "PHP (Laravel, Lumen, Symfony)",
+          "Python",
+          "Golang",
+          "REST & SOAP APIs",
+          "GraphQL",
+          "Microservices Architecture"
+        ]
+      },
+      "frontend": {
+        "title": "Frontend & Mobile",
+        "items": [
+          "React / Next.js",
+          "Angular",
+          "React Native",
+          "Flutter",
+          "TypeScript / JavaScript",
+          "Tailwind CSS",
+          "Responsive Design",
+          "Accessibility (A11y)"
+        ]
+      },
+      "database": {
+        "title": "Bancos de Dados",
+        "items": ["PostgreSQL", "MongoDB", "MySQL", "Redis", "ElasticSearch"]
+      },
+      "infrastructure": {
+        "title": "DevOps & Cloud",
+        "items": [
+          "Docker / Kubernetes",
+          "AWS (ECS, EKS, S3, Lambda, SQS, SNS, Cognito, SES)",
+          "Google Cloud Platform",
+          "Heroku",
+          "CI/CD (Github Actions, Jenkins, CodePipeline)",
+          "New Relic",
+          "DataDog",
+          "Grafana"
+        ]
+      },
+      "messaging": {
+        "title": "Mensageria & Queue",
+        "items": ["Redis Pub/Sub", "RabbitMQ", "AWS SQS/SNS", "Pusher"]
+      },
+      "integrations": {
+        "title": "Integrações & Pagamentos",
+        "items": [
+          "Stripe",
+          "Apple Store API",
+          "Cryptomus",
+          "NoxPay (Pix)",
+          "Twilio (SMS & WhatsApp)",
+          "SendGrid / SES / SendinBlue",
+          "Firebase",
+          "Cloudinary"
+        ]
+      },
+      "methodologies": {
+        "title": "Metodologias & Práticas",
+        "items": [
+          "Scrum / Agile",
+          "TDD (Test Driven Development)",
+          "Clean Architecture",
+          "Hexagonal Architecture",
+          "Microservices",
+          "CI/CD",
+          "Code Review",
+          "Git Flow"
+        ]
+      }
+    },
+    "certifications": {
+      "title": "Certificações",
+      "aws": {
+        "title": "AWS Certified Cloud Practitioner",
+        "description": "Certificação que fornece compreensão fundamental de conceitos, serviços e terminologia da AWS Cloud",
+        "status": "Ativo"
+      }
+    }
+  },
+  "projects": {
+    "title": "Projetos em Destaque",
+    "subtitle": "Soluções que geraram impacto real e escalaram negócios",
+    "adapta": {
+      "name": "Adapta Mídia",
+      "tagline": "Revolucionando mídia Out-of-Home com IA",
+      "description": "Plataforma premiada de análise e otimização de publicidade exterior usando Visão Computacional e Inteligência Artificial",
+      "role": "Founder & Lead Developer",
+      "impact": [
+        "Premiado com R$ 140.000 em competições nacionais",
+        "Análise em tempo real de milhares de impressões",
+        "Otimização de ROI em campanhas publicitárias"
+      ],
+      "website": "adaptamidia.com"
+    },
+    "fintech": {
+      "name": "Plataforma Fintech",
+      "tagline": "Infraestrutura de pagamentos de alta performance",
+      "description": "Plataforma completa de fintech com suporte a múltiplos métodos de pagamento, incluindo criptomoedas",
+      "role": "CTO & Tech Lead",
+      "impact": [
+        "Arquitetura escalável do zero",
+        "Integração com múltiplos gateways de pagamento",
+        "Sistema de autenticação e segurança avançado"
+      ]
+    },
+    "credit_emission": {
+      "name": "Sistema de Emissão de Crédito",
+      "tagline": "Digitalização e automação de processos financeiros",
+      "description": "Plataforma B2B para emissão e gestão de crédito corporativo",
+      "role": "Tech Lead",
+      "impact": [
+        "Redução de tempo de análise de crédito em 70%",
+        "Automatização de processos manuais",
+        "Dashboard analytics em tempo real"
+      ]
+    },
+    "banking": {
+      "name": "Bankline Corporativo",
+      "tagline": "Internet Banking para grandes empresas",
+      "description": "Desenvolvimento do novo Bankline do Itaú BBA para clientes corporativos",
+      "role": "Tech Lead - Squad Autenticação",
+      "impact": [
+        "Sistema de autenticação de alto nível de segurança",
+        "Gestão granular de permissões de usuários",
+        "90% de cobertura de testes"
+      ]
+    },
+    "payment_gateway": {
+      "name": "Integração Gateway de Pagamentos",
+      "tagline": "Conectando sistemas bancários internacionais",
+      "description": "Integração de gateway de pagamentos com bancos norte-americanos",
+      "role": "FIC Engineer",
+      "impact": [
+        "Integração com múltiplos bancos americanos",
+        "Web scraping de alta performance",
+        "Sistema de rotação de IPs multi-cloud"
+      ]
+    },
+    "cta": "Ver Mais Projetos"
   },
   "contact": {
-    "title": "Entre em Contato",
-    "description": "Vamos conversar sobre seu próximo projeto",
-    "email": "Email",
-    "linkedin": "LinkedIn",
-    "github": "GitHub",
-    "twitter": "Twitter"
+    "title": "Vamos Construir Algo Extraordinário Juntos",
+    "subtitle": "Entre em contato para discutir seu próximo projeto ou oportunidade",
+    "description": "Estou sempre aberto a novos desafios, parcerias estratégicas e oportunidades de criar impacto através da tecnologia.",
+    "email": "velrino@gmail.com",
+    "phone": "+55 11 95496 5023",
+    "location": "São Paulo, Brasil",
+    "availability": "Disponível para projetos remotos globalmente",
+    "social": {
+      "linkedin": "linkedin.com/in/velrino",
+      "github": "github.com/velrino",
+      "instagram": "@velrino"
+    },
+    "cta": {
+      "email": "Enviar Email",
+      "linkedin": "Conectar no LinkedIn",
+      "github": "Ver GitHub",
+      "calendar": "Agendar Reunião"
+    },
+    "form": {
+      "name": "Nome",
+      "email": "Email",
+      "subject": "Assunto",
+      "message": "Mensagem",
+      "send": "Enviar Mensagem",
+      "sending": "Enviando...",
+      "success": "Mensagem enviada com sucesso!",
+      "error": "Erro ao enviar mensagem. Tente novamente."
+    }
   },
-  "chatbot": {
-    "title": "Converse comigo",
-    "placeholder": "Pergunte sobre minha experiência...",
-    "send": "Enviar"
+  "footer": {
+    "tagline": "Construindo o futuro, uma linha de código por vez",
+    "copyright": "© 2025 Denis Magalhães. Todos os direitos reservados.",
+    "links": {
+      "about": "Sobre",
+      "experience": "Experiência",
+      "awards": "Prêmios",
+      "talks": "Palestras",
+      "contact": "Contato"
+    }
+  },
+  "meta": {
+    "home": {
+      "title": "Denis Magalhães | CTO & Tech Lead | Full Stack Developer",
+      "description": "CTO & Tech Lead especializado em arquitetar plataformas escaláveis. +10 anos de experiência em JavaScript/TypeScript, React, Node.js, IA e Cloud."
+    },
+    "awards": {
+      "title": "Prêmios & Reconhecimentos | Denis Magalhães",
+      "description": "Premiado com R$ 140.000 em competições nacionais de inovação tecnológica. Adapta Summit 2023 e Adapta Hackathon 2022."
+    },
+    "talks": {
+      "title": "Palestras & Apresentações | Denis Magalhães",
+      "description": "Compartilhando conhecimento sobre IA, arquitetura de software, integração de APIs e liderança técnica."
+    }
   }
 }
