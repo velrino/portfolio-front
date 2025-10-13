@@ -34,6 +34,8 @@ import {
   FaDatabase,
   FaServer,
   FaCloud,
+  FaGithub,
+  FaInstagram,
 } from "react-icons/fa";
 import {
   VerticalTimeline,
@@ -50,6 +52,7 @@ export default function HomeComponent() {
       <HeroSection />
       <AboutSection />
       <SkillsSection />
+      <Footer />
     </>
   );
 }
@@ -300,6 +303,53 @@ export const SkillsSection = () => {
         </p>
       </div>
       <NestedOrbitSystem />
+    </div>
+  );
+};
+
+export const Footer = () => {
+  const socialLinks = [
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/velrino/",
+      icon: FaLinkedin,
+      color: "hover:text-[#0A66C2]",
+    },
+    {
+      name: "GitHub",
+      url: "https://github.com/velrino",
+      icon: FaGithub,
+      color: "hover:text-[#333333]",
+    },
+    {
+      name: "Instagram",
+      url: "https://www.instagram.com/velrino",
+      icon: FaInstagram,
+      color: "hover:text-[#E4405F]",
+    },
+  ];
+
+  return (
+    <div className="min-h-screen flex items-center justify-center">
+      <div className="text-center">
+        <h2 className="text-3xl md:text-5xl font-bold text-white mb-10">
+          Contact
+        </h2>
+        <div className="flex gap-8 justify-center items-center">
+          {socialLinks.map((social) => (
+            <a
+              key={social.name}
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`text-white transition-colors duration-300 ${social.color}`}
+              aria-label={social.name}
+            >
+              <social.icon size={48} />
+            </a>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

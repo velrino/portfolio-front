@@ -12,6 +12,11 @@ interface Company {
 export const NestedOrbitSystem = () => {
   const [scale, setScale] = useState(1);
   const [isMobile, setIsMobile] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -205,8 +210,10 @@ export const NestedOrbitSystem = () => {
     return companies.map((company, index) => {
       const radius = orbitSize / 2;
       const angleRad = (company.angle * Math.PI) / 180;
-      const x = Math.cos(angleRad) * radius;
-      const y = Math.sin(angleRad) * radius;
+      const x = Math.round((Math.cos(angleRad) * radius) * 100) / 100;
+      const y = Math.round((Math.sin(angleRad) * radius) * 100) / 100;
+      const translateX = Math.round((x - company.size / 2) * 100) / 100;
+      const translateY = Math.round((y - company.size / 2) * 100) / 100;
 
       return (
         <div
@@ -216,9 +223,7 @@ export const NestedOrbitSystem = () => {
           style={{
             left: "50%",
             top: "50%",
-            transform: `translate(${x - company.size / 2}px, ${
-              y - company.size / 2
-            }px)`,
+            transform: `translate(${translateX}px, ${translateY}px)`,
             width: `${company.size}px`,
             height: `${company.size}px`,
           }}
@@ -258,8 +263,10 @@ export const NestedOrbitSystem = () => {
     ));
   };
 
-  // Gerar estrelas com posições aleatórias
+  // Gerar estrelas com posições aleatórias apenas no cliente
   const stars = useMemo(() => {
+    if (!mounted) return [];
+
     const starsArray = [];
     const starCount = isMobile ? 80 : 120;
 
@@ -288,7 +295,7 @@ export const NestedOrbitSystem = () => {
     }
 
     return starsArray;
-  }, [isMobile]);
+  }, [isMobile, mounted]);
 
   // Função para lidar com clique nas empresas
   const handleCompanyClick = (url: string, name: string) => {
