@@ -1,27 +1,30 @@
 'use client';
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-
-type Locale = 'en-US' | 'pt-BR';
+import { Locale, LocaleType, DEFAULT_LOCALE } from '@/types/locale';
 
 interface LocaleContextType {
-  locale: Locale;
-  setLocale: (locale: Locale) => void;
+  locale: LocaleType;
+  setLocale: (locale: LocaleType) => void;
 }
 
 const LocaleContext = createContext<LocaleContextType | undefined>(undefined);
 
+const isValidLocale = (value: string): value is LocaleType => {
+  return Object.values(Locale).includes(value as Locale);
+};
+
 export function LocaleProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>('pt-BR');
+  const [locale, setLocaleState] = useState<LocaleType>(DEFAULT_LOCALE);
 
   useEffect(() => {
-    const savedLocale = localStorage.getItem('locale') as Locale;
-    if (savedLocale && (savedLocale === 'en-US' || savedLocale === 'pt-BR')) {
+    const savedLocale = localStorage.getItem('locale');
+    if (savedLocale && isValidLocale(savedLocale)) {
       setLocaleState(savedLocale);
     }
   }, []);
 
-  const setLocale = (newLocale: Locale) => {
+  const setLocale = (newLocale: LocaleType) => {
     setLocaleState(newLocale);
     localStorage.setItem('locale', newLocale);
   };

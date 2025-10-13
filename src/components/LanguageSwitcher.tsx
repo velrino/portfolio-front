@@ -1,6 +1,7 @@
 'use client';
 
 import { useLocale } from '@/lib/i18n/LocaleContext';
+import { Locale, LOCALE_LABELS } from '@/types/locale';
 import { Button } from '@/components/ui/button';
 import { Languages } from 'lucide-react';
 import {
@@ -22,18 +23,15 @@ export default function LanguageSwitcher() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem
-          onClick={() => setLocale('pt-BR')}
-          className={locale === 'pt-BR' ? 'bg-accent' : ''}
-        >
-          Português (BR)
-        </DropdownMenuItem>
-        <DropdownMenuItem
-          onClick={() => setLocale('en-US')}
-          className={locale === 'en-US' ? 'bg-accent' : ''}
-        >
-          English (US)
-        </DropdownMenuItem>
+        {Object.values(Locale).map((localeOption) => (
+          <DropdownMenuItem
+            key={localeOption}
+            onClick={() => setLocale(localeOption)}
+            className={locale === localeOption ? 'bg-accent' : ''}
+          >
+            {LOCALE_LABELS[localeOption]}
+          </DropdownMenuItem>
+        ))}
       </DropdownMenuContent>
     </DropdownMenu>
   );

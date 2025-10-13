@@ -1,12 +1,13 @@
 'use client';
 
 import { useLocale } from './LocaleContext';
+import { Locale } from '@/types/locale';
 import enUS from './locales/en-US.json';
 import ptBR from './locales/pt-BR.json';
 
-const translations = {
-  'en-US': enUS,
-  'pt-BR': ptBR,
+const translations: Record<Locale, typeof enUS> = {
+  [Locale.EN_US]: enUS,
+  [Locale.PT_BR]: ptBR,
 };
 
 export function useTranslation() {

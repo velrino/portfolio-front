@@ -7,6 +7,36 @@ Portfólio pessoal de Denis Magalhães, conhecido como "velrino".
 - **Nome:** Denis Magalhães
 - **Apelido:** velrino
 
+## Paleta de Cores
+
+### Cores Principais
+- **Primary (Purple)**: `#7c3dfd` - RGB(124, 61, 253)
+- **Secondary (Navy)**: `#150b38` - RGB(21, 11, 56)
+
+### Uso das Cores
+- **Light Mode**:
+  - Background: Branco
+  - Primary: Purple `#7c3dfd` para CTAs e elementos importantes
+  - Secondary: Navy `#150b38` para texto secundário e cards
+
+- **Dark Mode**:
+  - Background: Navy `#150b38`
+  - Primary: Purple mais claro para contraste
+  - Cards: Navy ligeiramente mais claro
+
+### Classes Tailwind Disponíveis
+```tsx
+// Primary (Purple)
+className="bg-primary text-primary-foreground"
+className="border-primary text-primary"
+
+// Secondary (Navy)
+className="bg-secondary text-secondary-foreground"
+
+// Outros
+className="bg-accent text-accent-foreground"
+```
+
 ## Stack Tecnológica
 - **Framework:** Next.js 15.5.4 (App Router)
 - **React:** 19.1.0
