@@ -1241,10 +1241,10 @@ export const AwardsSection = () => {
                 <FaChevronRight className="group-hover:translate-x-1 transition-transform" />
               </a>
 
-              <button className="px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 flex items-center gap-2">
+              <a href="https://www.adaptamidia.com/demo" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 flex items-center gap-2">
                 <FaPlay />
                 {t("awards.project.demo.cta")}
-              </button>
+              </a>
             </div>
 
             <div className="text-center">
