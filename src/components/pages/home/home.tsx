@@ -14,12 +14,8 @@ import {
   FaChevronRight,
   FaCheckCircle,
   FaBriefcase,
-  FaGraduationCap,
   FaCode,
   FaMicrophone,
-  FaCalendarAlt,
-  FaEnvelope,
-  FaMapMarkerAlt,
   FaUsers,
   FaBrain,
   FaCreditCard,
@@ -62,11 +58,6 @@ enum SocialPlatform {
   LINKEDIN = "linkedin",
   GITHUB = "github",
   INSTAGRAM = "instagram",
-}
-
-enum ContactMethod {
-  EMAIL = "email",
-  LOCATION = "location",
 }
 
 enum AwardType {
@@ -698,7 +689,7 @@ export const AboutSection = () => {
 // ==================== EXPERIENCE SECTION ====================
 // Helper function to extract and render tech stack with icons
 const getTechIcons = (stackString: string) => {
-  const techMap: Record<string, { icon: any; color: string }> = {
+  const techMap: Record<string, { icon: React.ElementType; color: string }> = {
     NestJS: { icon: SiNodedotjs, color: "#e0234e" },
     "Node.js": { icon: SiNodedotjs, color: "#339933" },
     PostgreSQL: { icon: SiPostgresql, color: "#336791" },
@@ -739,7 +730,7 @@ const getTechIcons = (stackString: string) => {
       }
       return null;
     })
-    .filter(Boolean);
+    .filter((item): item is { name: string; icon: React.ElementType; color: string } => item !== null);
 };
 
 export const ExperienceSection = () => {
@@ -805,8 +796,8 @@ export const ExperienceSection = () => {
                 {t("experience.current.highlights.0") && "Key Highlights:"}
               </h4>
               <ul className="space-y-2">
-                {Array.isArray(t("experience.current.highlights" as any)) &&
-                  (t("experience.current.highlights" as any) as string[]).map(
+                {Array.isArray(t("experience.current.highlights")) &&
+                  (t("experience.current.highlights") as unknown as string[]).map(
                     (highlight: string, index: number) => (
                       <li
                         key={index}
@@ -953,10 +944,17 @@ export const ExperienceSection = () => {
 
         {/* Timeline of Previous Positions */}
         <VerticalTimeline lineColor="rgba(168, 85, 247, 0.2)" animate={true}>
-          {Array.isArray(t("experience.positions" as any)) &&
-            (t("experience.positions" as any) as any[])
+          {Array.isArray(t("experience.positions")) &&
+            (t("experience.positions") as unknown as Array<{
+              title: string;
+              company: string;
+              period: string;
+              location: string;
+              description: string;
+              achievements: string[];
+            }>)
               // .slice(0, 5)
-              .map((position: any, index: number) => (
+              .map((position, index: number) => (
                 <VerticalTimelineElement
                   key={index}
                   position={index % 2 === 0 ? "left" : "right"}
@@ -1029,7 +1027,7 @@ export const ExperienceSection = () => {
                           if (techIcons.length > 0) {
                             return (
                               <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-white/10">
-                                {techIcons.map((tech: any, idx: number) => {
+                                {techIcons.map((tech, idx: number) => {
                                   const Icon = tech.icon;
                                   return (
                                     <div
@@ -1166,8 +1164,8 @@ export const AwardsSection = () => {
 
           {/* Features Grid */}
           <div className="grid md:grid-cols-2 gap-4 mb-8">
-            {Array.isArray(t("awards.project.features" as any)) &&
-              (t("awards.project.features" as any) as string[]).map(
+            {Array.isArray(t("awards.project.features")) &&
+              (t("awards.project.features") as unknown as string[]).map(
                 (feature: string, index: number) => (
                   <div
                     key={index}
@@ -1263,10 +1261,10 @@ export const TalksSection = () => {
             </h4>
             <div className="grid md:grid-cols-2 gap-3">
               {Array.isArray(
-                t("talks.featured.chatgpt_whatsapp.topics" as any)
+                t("talks.featured.chatgpt_whatsapp.topics")
               ) &&
                 (
-                  t("talks.featured.chatgpt_whatsapp.topics" as any) as string[]
+                  t("talks.featured.chatgpt_whatsapp.topics") as unknown as string[]
                 ).map((topic: string, index: number) => (
                   <div
                     key={index}
@@ -1357,20 +1355,6 @@ export const ContactSection = () => {
     },
   ];
 
-  const contactInfo: Array<{
-    method: ContactMethod;
-    icon: typeof FaEnvelope;
-  }> = [
-    {
-      method: ContactMethod.EMAIL,
-      icon: FaEnvelope,
-    },
-    {
-      method: ContactMethod.LOCATION,
-      icon: FaMapMarkerAlt,
-    },
-  ];
-
   return (
     <section
       id="contact"
@@ -1407,7 +1391,7 @@ export const ContactSection = () => {
               <a
                 key={social.platform}
                 href={`https://${t(
-                  `contact.social.${social.platform}` as any
+                  `contact.social.${social.platform}`
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
