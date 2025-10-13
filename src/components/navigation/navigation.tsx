@@ -44,11 +44,22 @@ export function Navigation() {
   const navItems = [
     { href: isHomePage ? "#about" : "/#about", label: t("nav.about") },
     { href: isHomePage ? "#experience" : "/#experience", label: t("nav.experience") },
-    { href: isHomePage ? "#projects" : "/#projects", label: t("nav.projects") },
-    { href: isHomePage ? "#skills" : "/#skills", label: t("nav.skills") },
+    { href: isHomePage ? "#awards" : "/#awards", label: t("navigation.awards") },
     { href: isHomePage ? "#talks" : "/#talks", label: t("nav.talks") },
+    { href: isHomePage ? "#skills" : "/#skills", label: t("nav.skills") },
     { href: isHomePage ? "#contact" : "/#contact", label: t("nav.contact") },
   ];
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (isHomePage && href.startsWith("#")) {
+      e.preventDefault();
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+        setIsOpen(false);
+      }
+    }
+  };
 
   return (
     <nav
@@ -71,6 +82,7 @@ export function Navigation() {
               <a
                 key={item.href}
                 href={item.href}
+                onClick={(e) => handleNavClick(e, item.href)}
                 className="text-sm text-foreground/80 hover:text-primary transition-colors"
               >
                 {item.label}
@@ -123,8 +135,8 @@ export function Navigation() {
                       <SheetClose asChild key={item.href}>
                         <a
                           href={item.href}
+                          onClick={(e) => handleNavClick(e, item.href)}
                           className="text-2xl font-semibold text-center py-3 hover:text-primary transition-colors"
-                          onClick={() => setIsOpen(false)}
                         >
                           {item.label}
                         </a>
@@ -142,7 +154,7 @@ export function Navigation() {
                         )
                       }
                     >
-                      {locale === Locale.PT_BR ? "🇺🇸 English" : "🇧🇷 Português"}
+                      {locale === Locale.PT_BR ? "English" : "Português"}
                     </button>
                   </div>
                 </div>

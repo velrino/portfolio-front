@@ -52,11 +52,11 @@ export default function HomeComponent() {
   return (
     <>
       <HeroSection />
+      <SkillsSection />
       <AboutSection />
       <ExperienceSection />
       <AwardsSection />
       <TalksSection />
-      <SkillsSection />
       <ContactSection />
     </>
   );
@@ -95,7 +95,7 @@ export const HeroSection = () => {
               {t("home.cta.primary")}
               <FaChevronRight className="group-hover:translate-x-1 transition-transform" />
             </a>
-            <a
+            {/* <a
               href="/Denis-Magalhaes-Velrino-Silva.pdf"
               download
               className="px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 w-full sm:w-auto text-center"
@@ -107,7 +107,7 @@ export const HeroSection = () => {
               className="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-black transition-all duration-300 w-full sm:w-auto text-center"
             >
               {t("home.cta.contact")}
-            </a>
+            </a> */}
           </div>
         </motion.div>
       </div>
@@ -666,9 +666,6 @@ export const SkillsSection = () => {
           <p className="text-white/80 mb-4 leading-relaxed max-w-2xl mx-auto">
             {t("skills.certifications.aws.description")}
           </p>
-          <span className="inline-block px-4 py-2 bg-purple-500/20 border border-purple-500/50 rounded-full text-purple-300 font-semibold">
-            {t("skills.certifications.aws.status")}
-          </span>
         </div>
       </motion.div>
     </section>
@@ -737,37 +734,6 @@ export const ContactSection = () => {
           </p>
         </motion.div>
 
-        {/* Contact Info */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="grid md:grid-cols-2 gap-6 mb-12"
-        >
-          {contactInfo.map((info) => {
-            const Icon = info.icon;
-            return (
-              <div
-                key={info.method}
-                className="bg-black/20 backdrop-blur-lg border border-white/10 rounded-xl p-6 text-center"
-              >
-                <Icon className="text-3xl text-purple-400 mx-auto mb-3" />
-                <p className="text-sm text-white/60 mb-1">
-                  {info.method === ContactMethod.EMAIL
-                    ? "Email"
-                    : t("contact.location")}
-                </p>
-                <p className="text-white/90">
-                  {info.method === ContactMethod.EMAIL
-                    ? t("contact.email")
-                    : t("contact.location")}
-                </p>
-              </div>
-            );
-          })}
-        </motion.div>
-
         {/* Social Links */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -786,32 +752,16 @@ export const ContactSection = () => {
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`group p-4 bg-black/20 backdrop-blur-lg border border-white/10 rounded-xl hover:border-purple-500/50 transition-all duration-300 ${social.color}`}
+                className={`group p-4 rounded-xl hover:border-purple-500/50 transition-all duration-300 ${social.color}`}
                 aria-label={social.platform}
               >
                 <Icon
-                  size={32}
+                  size={75}
                   className="group-hover:scale-110 transition-transform"
                 />
               </a>
             );
           })}
-        </motion.div>
-
-        {/* Availability Badge */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
-          <div className="inline-block bg-purple-900/20 border border-purple-500/30 rounded-full px-6 py-3">
-            <p className="text-purple-300 font-semibold flex items-center gap-2 justify-center">
-              <span className="w-3 h-3 bg-purple-400 rounded-full animate-pulse" />
-              {t("contact.availability")}
-            </p>
-          </div>
         </motion.div>
 
         {/* Footer */}

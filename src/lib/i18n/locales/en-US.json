@@ -10,11 +10,20 @@
     "contact": "Contact",
     "cv": "Resume"
   },
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "talks": "Talks",
+    "contact": "Contact",
+    "toggle": "Toggle language"
+  },
   "home": {
     "title": "Home",
-    "welcome": "Transforming Ideas into High-Impact Technology Solutions",
-    "subtitle": "CTO & Tech Lead specialized in architecting scalable platforms that deliver extraordinary results",
-    "description": "With over 10 years leading high-complexity projects, I build systems that connect cutting-edge technology with business vision",
+    "welcome": "Denis Magalhães",
+    "subtitle": "CTO & Tech Lead",
+    "description": "Full-stack software architect with +10 years transforming complex challenges into scalable solutions",
     "cta": {
       "primary": "View Projects",
       "secondary": "Download Resume",
