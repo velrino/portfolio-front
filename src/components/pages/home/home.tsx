@@ -2,6 +2,7 @@
 
 import { useTranslation } from "@/lib/i18n/useTranslation";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import {
   FaTrophy,
   FaAward,
@@ -176,9 +177,11 @@ export const AboutSection = () => {
               className="float-right ml-6 mb-6 w-full md:w-[350px]"
             >
               <div className="relative group overflow-hidden rounded-xl">
-                <img
+                <Image
                   src="/images/me.jpeg"
                   alt="Denis Magalhães no MongoDB 2024"
+                  width={350}
+                  height={467}
                   className="w-full aspect-[3/4] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
@@ -568,9 +571,11 @@ export const AboutSection = () => {
                 viewport={{ once: true }}
                 className="group relative overflow-hidden rounded-xl"
               >
-                <img
+                <Image
                   src="/images/meetup-1.jpg"
                   alt="Workshop na Beetech"
+                  width={600}
+                  height={280}
                   className="w-full h-[280px] object-cover rounded-xl transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex items-end p-4">
@@ -592,9 +597,11 @@ export const AboutSection = () => {
                 viewport={{ once: true }}
                 className="group relative overflow-hidden rounded-xl"
               >
-                <img
+                <Image
                   src="/images/meetup-2.jpg"
                   alt="Workshop no SENAI"
+                  width={600}
+                  height={280}
                   className="w-full h-[280px] object-cover rounded-xl transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex items-end p-4">
@@ -616,9 +623,11 @@ export const AboutSection = () => {
                 viewport={{ once: true }}
                 className="group relative overflow-hidden rounded-xl"
               >
-                <img
+                <Image
                   src="/images/meetup-3.jpg"
                   alt="Workshop Mobile no Itaú"
+                  width={600}
+                  height={280}
                   className="w-full h-[280px] object-cover rounded-xl transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex items-end p-4">
@@ -640,9 +649,11 @@ export const AboutSection = () => {
                 viewport={{ once: true }}
                 className="group relative overflow-hidden rounded-xl"
               >
-                <img
+                <Image
                   src="/images/meetup-4.jpeg"
                   alt="Apresentação na FATEC Zona Sul"
+                  width={600}
+                  height={280}
                   className="w-full h-[280px] object-cover rounded-xl transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex items-end p-4">
@@ -1109,8 +1120,11 @@ export const AwardsSection = () => {
                 viewport={{ once: true }}
                 className="flex flex-col h-full transition-all duration-300"
               >
-                <img
+                <Image
                   src={`/images/adapta-${award.type}.jpg`}
+                  alt={t(`awards.featured.${award.type}.title`)}
+                  width={600}
+                  height={400}
                   className="w-full h-[400px] object-cover rounded-t-2xl"
                 />
                 <div className="flex-1 p-8 bg-black/20 backdrop-blur-lg border border-purple-500/20 rounded-b-2xl hover:border-purple-500/40 flex flex-col">

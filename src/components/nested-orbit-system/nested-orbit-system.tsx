@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from "react";
+import Image from "next/image";
 
 interface Company {
   name: string;
@@ -234,9 +235,11 @@ export const NestedOrbitSystem = () => {
               animationDuration: `${orbitSpeed}s`,
             }}
           >
-            <img
+            <Image
               src={company.image}
               alt={company.name}
+              width={company.size}
+              height={company.size}
               className="w-full h-full object-contain p-0.5"
             />
           </div>
@@ -449,9 +452,11 @@ export const NestedOrbitSystem = () => {
               height: `${centerLogo.size}px`,
             }}
           >
-            <img
+            <Image
               src="/logo-white.png"
               alt={centerLogo.name}
+              width={centerLogo.size}
+              height={centerLogo.size}
               className={`w-full h-full object-contain ${
                 isMobile ? "p-2" : "p-4"
               }`}
