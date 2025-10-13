@@ -25,12 +25,12 @@ export default function VideoBackground() {
         loop
         muted
         playsInline
-        className="fixed top-0 left-0 w-full h-full object-cover -z-10"
+        className="absolute top-0 left-0 w-full h-full object-cover"
         key={videoSrc}
       >
         <source src={videoSrc} type="video/mp4" />
       </video>
-      <div className="fixed top-0 left-0 w-full h-full bg-black/80 -z-10" />
+      <div className="absolute top-0 left-0 w-full h-full bg-black/80" />
     </>
   );
 }

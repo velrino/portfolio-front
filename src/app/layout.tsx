@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Denis Magalhães - velrino",
+  title: "Denis Magalhães - Velrino",
   description: "Portfólio de Denis Magalhães (velrino)",
 };
 
@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
       >
         <ThemeProvider
           attribute="class"
@@ -39,9 +39,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <LocaleProvider>
-            <div className="min-h-screen flex flex-col">
+            <div className="min-h-screen flex flex-col overflow-x-hidden w-full">
               <Navigation />
-              <main className="flex-1">{children}</main>
+              <main className="flex-1 overflow-x-hidden w-full">{children}</main>
             </div>
           </LocaleProvider>
         </ThemeProvider>

@@ -2,14 +2,55 @@
   "home": {
     "title": "Início",
     "welcome": "Olá, sou Denis Magalhães",
-    "subtitle": "Também conhecido como velrino"
+    "subtitle": "Também conhecido como velrino",
+    "description": "Engenheiro Frontend, Backend e AI/ML com mais de 10 anos de experiência"
   },
-  "cv": {
-    "title": "Currículo",
-    "pageTitle": "Meu Currículo"
+  "nav": {
+    "about": "Sobre",
+    "experience": "Experiência",
+    "projects": "Projetos",
+    "skills": "Habilidades",
+    "talks": "Palestras",
+    "contact": "Contato",
+    "toggle": "Alternar idioma"
   },
-  "navigation": {
-    "home": "Início",
-    "cv": "Currículo"
+  "about": {
+    "title": "Sobre Mim",
+    "description": "Desenvolvedor full-stack apaixonado por tecnologia desde 2014"
+  },
+  "experience": {
+    "title": "Experiência Profissional",
+    "years": "anos de experiência"
+  },
+  "projects": {
+    "title": "Projetos",
+    "viewAll": "Ver todos",
+    "viewLive": "Ver ao vivo",
+    "viewCode": "Ver código"
+  },
+  "skills": {
+    "title": "Habilidades",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "aiml": "AI/ML",
+    "tools": "Ferramentas"
+  },
+  "talks": {
+    "title": "Palestras & Apresentações",
+    "watchVideo": "Assistir",
+    "viewSlides": "Ver slides"
+  },
+  "contact": {
+    "title": "Entre em Contato",
+    "description": "Vamos conversar sobre seu próximo projeto",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "twitter": "Twitter"
+  },
+  "chatbot": {
+    "title": "Converse comigo",
+    "placeholder": "Pergunte sobre minha experiência...",
+    "send": "Enviar"
   }
 }
