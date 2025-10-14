@@ -91,7 +91,7 @@ export const HeroSection = () => {
 
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 md:px-8 text-center w-full">
         <div className="max-w-5xl">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white outlined-text">
             {t("home.welcome")}
           </h1>
           <div className="text-base md:text-lg text-white/80 mb-12 max-w-2xl mx-auto">
