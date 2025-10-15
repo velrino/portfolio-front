@@ -2,6 +2,7 @@
 
 import { useTranslation } from "@/lib/i18n/useTranslation";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import {
   FaTrophy,
   FaAward,
@@ -49,10 +50,32 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import VideoBackground from "@/components/VideoBackground";
-import { NestedOrbitSystem } from "@/components/nested-orbit-system/nested-orbit-system";
-import { SignalzAnimation } from "@/components/animate/circuit";
-import { TypewriterWelcome } from "@/components/typewelcome/typewriter-welcome";
+
+// Lazy load heavy components
+const VideoBackground = dynamic(() => import("@/components/VideoBackground"), {
+  ssr: false,
+});
+const NestedOrbitSystem = dynamic(
+  () =>
+    import("@/components/nested-orbit-system/nested-orbit-system").then(
+      (mod) => ({ default: mod.NestedOrbitSystem })
+    ),
+  { ssr: false }
+);
+const SignalzAnimation = dynamic(
+  () =>
+    import("@/components/animate/circuit").then((mod) => ({
+      default: mod.SignalzAnimation,
+    })),
+  { ssr: false }
+);
+const TypewriterWelcome = dynamic(
+  () =>
+    import("@/components/typewelcome/typewriter-welcome").then((mod) => ({
+      default: mod.TypewriterWelcome,
+    })),
+  { ssr: false }
+);
 
 // ==================== ENUMS ====================
 enum SocialPlatform {
@@ -144,6 +167,7 @@ export const AboutSection = () => {
                   width={350}
                   height={467}
                   className="w-full aspect-[3/4] object-cover"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                   <p className="text-white font-semibold text-xs leading-relaxed">
@@ -484,6 +508,7 @@ export const AboutSection = () => {
                   width={600}
                   height={280}
                   className="w-full h-[280px] object-cover rounded-xl transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex items-end p-4">
                   <div>
@@ -504,6 +529,7 @@ export const AboutSection = () => {
                   width={600}
                   height={280}
                   className="w-full h-[280px] object-cover rounded-xl transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex items-end p-4">
                   <div>
@@ -524,6 +550,7 @@ export const AboutSection = () => {
                   width={600}
                   height={280}
                   className="w-full h-[280px] object-cover rounded-xl transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex items-end p-4">
                   <div>
@@ -544,6 +571,7 @@ export const AboutSection = () => {
                   width={600}
                   height={280}
                   className="w-full h-[280px] object-cover rounded-xl transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex items-end p-4">
                   <div>
@@ -854,7 +882,7 @@ export const ExperienceSection = () => {
         </div>
 
         {/* Timeline of Previous Positions */}
-        <VerticalTimeline lineColor="rgba(168, 85, 247, 0.2)" animate={true}>
+        <VerticalTimeline lineColor="rgba(168, 85, 247, 0.2)" animate={false}>
           {Array.isArray(t("experience.positions")) &&
             (
               t("experience.positions") as unknown as Array<{
@@ -1018,6 +1046,7 @@ export const AwardsSection = () => {
                   width={600}
                   height={400}
                   className="w-full h-[400px] object-cover rounded-t-2xl"
+                  loading="lazy"
                 />
                 <div className="flex-1 p-8 bg-black/20 backdrop-blur-lg border border-purple-500/20 rounded-b-2xl hover:border-purple-500/40 flex flex-col">
                   <div className="flex items-center gap-3 mb-4">
@@ -1056,6 +1085,7 @@ export const AwardsSection = () => {
             loop
             muted
             playsInline
+            preload="metadata"
             className="absolute inset-0 w-full h-full object-cover"
           >
             <source
